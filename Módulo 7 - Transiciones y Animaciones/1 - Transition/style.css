@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #0077b6;
+    margin-bottom: 40px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: #00b4d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+
+    /* Transition: qué propiedades animar, duración y tipo de easing */
+    transition: all 0.5s ease;
+}
+
+/* Cambios al hacer hover */
+.box:hover {
+    background: #0077b6;
+    transform: scale(1.2);
+    border-radius: 50%;
+}
+
+.nota {
+    margin-top: 30px;
+    text-align: center;
+    color: #555;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Animations</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Scroll Animations</h1>
+
+  <section class="css-scroll">
+    <div class="caja-csstransform">CSS Puro</div>
+    <div class="caja-csstransform">CSS Puro</div>
+    <div class="caja-csstransform">CSS Puro</div>
+  </section>
+
+  <section class="aos-scroll">
+    <div data-aos="fade-up" class="caja-aos">AOS Library</div>
+    <div data-aos="fade-left" class="caja-aos">AOS Library</div>
+    <div data-aos="fade-right" class="caja-aos">AOS Library</div>
+  </section>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>

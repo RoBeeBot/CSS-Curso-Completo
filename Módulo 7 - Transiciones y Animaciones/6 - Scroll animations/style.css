@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 200vh;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* ===== CSS puro ===== */
+.css-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin: 80px 0;
+}
+
+.caja-csstransform {
+    width: 200px;
+    height: 100px;
+    background-color: #ff6f61;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Mostrar animación cuando está en viewport */
+.caja-csstransform.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== AOS ===== */
+.aos-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin: 80px 0;
+}
+
+.caja-aos {
+    width: 200px;
+    height: 100px;
+    background-color: #61dafb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
