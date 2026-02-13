@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: #f0f0f0;
+    color: #111;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+input,
+textarea,
+button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Focus states accesibles */
+input:focus,
+textarea:focus {
+    outline: 3px solid #61dafb;
+    /* Contraste alto */
+    outline-offset: 2px;
+    border-color: #61dafb;
+    background-color: #fff;
+}
+
+/* Botón accesible */
+button {
+    background-color: #61dafb;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:focus {
+    outline: 3px solid #ff6f61;
+    /* Contraste alto para el foco */
+    outline-offset: 2px;
+}
+
+button:hover {
+    background-color: #4fb1e0;
+}
+
+/* Contraste general */
+label {
+    font-weight: bold;
+    color: #111;
+}

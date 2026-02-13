@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Caja animada */
+.caja {
+    width: 150px;
+    height: 150px;
+    background-color: #61dafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    animation: mover 2s infinite alternate ease-in-out;
+}
+
+/* Animación por defecto */
+@keyframes mover {
+    from {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(200px) rotate(360deg);
+    }
+}
+
+/* Detecta preferencia de movimiento reducida */
+@media (prefers-reduced-motion: reduce) {
+    .caja {
+        animation: none;
+        /* Desactiva animaciones */
+        transform: none;
+        /* Mantiene en posición inicial */
+    }
+
+    body p::after {
+        content: " Animaciones desactivadas por accesibilidad.";
+        font-style: italic;
+        color: #ff6f61;
+    }
+}

@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #0077b6;
+    margin-bottom: 30px;
+}
+
+/* Estilo del texto general */
+p {
+    font-size: 18px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* Selección global */
+::selection {
+    background: #0077b6;
+    color: #fff;
+}
+
+/* Selección específica de un elemento */
+.highlight::selection {
+    background: #ffb703;
+    color: #000;
+}
+
+.nota {
+    margin-top: 30px;
+    text-align: center;
+    color: #555;
+}

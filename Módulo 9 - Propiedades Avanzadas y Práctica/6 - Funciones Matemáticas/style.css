@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #0077b6;
+    margin-bottom: 30px;
+}
+
+/* Uso de calc() */
+.calc-box {
+    width: calc(100% - 40px);
+    /* ancho total menos 40px */
+    max-width: 500px;
+    padding: 20px;
+    background: #00b4d8;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Uso de min() */
+.min-box {
+    width: min(80%, 300px);
+    /* toma el menor valor entre 80% y 300px */
+    padding: 20px;
+    background: #0077b6;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.nota {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+}

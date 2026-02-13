@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lazy Loading en CSS y HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Ejemplo de Lazy Loading</h1>
+
+  <p>
+    Desplázate hacia abajo para que las imágenes se carguen solo cuando aparecen en pantalla.
+  </p>
+
+  <div class="image-container">
+    <img src="https://via.placeholder.com/600x400?text=Imagen+1" loading="lazy" alt="Imagen 1">
+    <img src="https://via.placeholder.com/600x400?text=Imagen+2" loading="lazy" alt="Imagen 2">
+    <img src="https://via.placeholder.com/600x400?text=Imagen+3" loading="lazy" alt="Imagen 3">
+    <img src="https://via.placeholder.com/600x400?text=Imagen+4" loading="lazy" alt="Imagen 4">
+  </div>
+
+  <p class="nota">
+    Usamos el atributo <strong>loading="lazy"</strong> para optimizar la carga de imágenes.
+  </p>
+</body>
+</html>

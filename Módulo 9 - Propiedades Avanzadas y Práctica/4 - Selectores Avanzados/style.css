@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #0077b6;
+    margin-bottom: 30px;
+}
+
+/* Selector de clase */
+.first {
+    color: #fff;
+    background: #0077b6;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Selector de clase combinado con pseudo-clase */
+.second:nth-child(2) {
+    color: #0077b6;
+    background: #90e0ef;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Selector de elemento */
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Selector descendiente */
+.container ul li {
+    list-style: none;
+    background: #00b4d8;
+    color: white;
+    padding: 5px;
+    margin: 3px 0;
+    border-radius: 3px;
+}
+
+/* Selector de pseudo-elemento */
+a::after {
+    content: " →";
+}
+
+/* Selector de pseudo-clase hover */
+a:hover {
+    color: #00b4d8;
+    text-decoration: underline;
+}
+
+.nota {
+    margin-top: 30px;
+    text-align: center;
+    color: #555;
+}
