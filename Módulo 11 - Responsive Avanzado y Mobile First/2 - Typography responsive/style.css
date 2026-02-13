@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #61dafb;
+    color: white;
+    padding: 20px;
+}
+
+.text-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Typography responsive */
+
+/* Título Principal */
+h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    /* mínimo 2rem, máximo 4rem, escalable con el ancho */
+    margin-bottom: 20px;
+}
+
+/* Párrafos */
+p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    /* tamaño flexible según pantalla */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}

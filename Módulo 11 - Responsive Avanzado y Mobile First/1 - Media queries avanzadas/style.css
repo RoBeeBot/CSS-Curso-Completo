@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #61dafb;
+    padding: 40px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries Avanzadas */
+
+/* Para tablets (portrait) */
+@media (max-width: 900px) and (orientation: portrait) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para tablets (landscape) */
+@media (max-width: 900px) and (orientation: landscape) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Para móviles */
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Alta resolución */
+@media (min-resolution: 2dppx) {
+    .card {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+}

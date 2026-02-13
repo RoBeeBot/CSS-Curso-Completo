@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #61dafb;
+    color: white;
+    padding: 20px;
+}
+
+/* Contenedor fluido */
+.fluid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 200px;
+    /* Crece, se encoge, mínimo 200px */
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Grid inteligente */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #61dafb;
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+}
