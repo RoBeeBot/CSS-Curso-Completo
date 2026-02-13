@@ -1,0 +1,351 @@
+/* =========================
+   VARIABLES + RESET (mobile-first)
+   ========================= */
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #60a5fa;
+  --glass: rgba(255, 255, 255, 0.03);
+  --radius: 12px;
+  --container: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial;
+  background: linear-gradient(180deg, #071124 0%, #041026 60%);
+  color: #e6eef8;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+/* contenedor */
+.container {
+  width: 90%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* =========================
+   HEADER (fixed)
+   ========================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1200;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(
+    180deg,
+    rgba(4, 8, 20, 0.85),
+    rgba(4, 8, 20, 0.65)
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.brand {
+  font-weight: 800;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+.header__controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* botones básicos */
+.btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  padding: 0.45rem 0.65rem;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn:focus {
+  outline: 3px solid rgba(96, 165, 250, 0.25);
+}
+.btn--ghost {
+  background: transparent;
+}
+
+/* nav toggle (móvil) */
+.nav-toggle {
+  display: inline-grid;
+  place-items: center;
+  background: none;
+  border: 0;
+  padding: 0.35rem;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+/* =========================
+   OVERLAY (z-index demo)
+   ========================= */
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.6);
+  z-index: 2000;
+}
+.overlay[aria-hidden="false"] {
+  display: flex;
+}
+.overlay__panel {
+  background: linear-gradient(180deg, #071124, #0b1a2a);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 520px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================
+   LAYOUT: sidebar + content
+   ========================= */
+.page {
+  display: flex;
+  gap: 2rem;
+  margin-top: 80px;
+  padding: 1.5rem;
+}
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  position: sticky; /* STICKY: se "pega" al llegar al top */
+  top: 92px;
+  height: fit-content;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+}
+.sidebar__title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.sidebar__list {
+  list-style: none;
+  color: var(--muted);
+}
+.sidebar__list a {
+  color: var(--muted);
+  text-decoration: none;
+  display: block;
+  padding: 0.35rem 0;
+  border-radius: 6px;
+}
+.sidebar__list a:focus,
+.sidebar__list a:hover {
+  color: #fff;
+  background: var(--glass);
+}
+
+/* =========================
+   CONTENT
+   ========================= */
+.content {
+  flex: 1;
+  min-width: 0;
+}
+.hero {
+  padding: 2rem;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+.hero__card {
+  padding: 2rem;
+}
+.hero__title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.hero__lead {
+  color: var(--muted);
+}
+
+/* HERO absolute decorative shape:
+   Elemento absolutamente posicionado dentro del hero (padre relativo),
+   sirve para explicar que absolute se posiciona respecto al ancestro posicionado.
+*/
+.hero__shape {
+  position: absolute;
+  right: -40px;
+  top: -30px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(96, 165, 250, 0.18),
+    rgba(99, 102, 241, 0.06)
+  );
+  transform: rotate(18deg);
+  z-index: 5; /* se muestra por debajo de contenido que tenga z-index mayor */
+}
+
+/* =========================
+   CARDS (ejemplos) */
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  position: static;
+}
+.card h2 {
+  margin-bottom: 0.5rem;
+}
+.card--relative {
+  position: relative;
+}
+
+/* BADGE absolute: se posiciona respecto al padre .card--relative */
+.badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #ef4444;
+  color: white;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 700;
+  z-index: 20;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.6);
+}
+
+/* ABSOLUTE demo (dentro de flow demo box) */
+.absolute-demo {
+  position: relative;
+  margin-top: 0.75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 8px;
+}
+.absolute-demo__box {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+.absolute-demo__floating {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: linear-gradient(90deg, #f97316, #fb923c);
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  color: #081126;
+  font-weight: 700;
+  z-index: 15;
+}
+
+/* =========================
+   FAB (fixed) */
+.fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #60a5fa, #34d399);
+  border: none;
+  color: #041026;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 1100;
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.6);
+}
+
+/* =========================
+   FOOTER (static) */
+.site-footer {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* SPAACER para scroll */
+.spacer {
+  height: 900px;
+}
+
+/* =========================
+   RESPONSIVE: móvil primero -> tablet/desktop
+   ========================= */
+@media (max-width: 860px) {
+  .page {
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 76px;
+  }
+  .sidebar {
+    position: fixed;
+    left: -320px;
+    top: 76px;
+    height: calc(100vh - 76px);
+    transition: left 0.32s ease;
+  }
+  .sidebar.open {
+    left: 12px;
+    z-index: 1300;
+  }
+  .page .content {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 861px) {
+  .nav-toggle {
+    display: none;
+  }
+}

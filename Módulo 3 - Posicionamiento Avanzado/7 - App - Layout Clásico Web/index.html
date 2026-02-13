@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Módulo 3 — Posicionamiento Avanzado</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!--
+    HEADER (position: fixed)
+    Fijo en top para demostrar 'fixed' y contexto visual inmediato.
+  -->
+    <header class="site-header" role="banner">
+      <div class="container header__inner">
+        <a class="brand" href="#">Curso CSS</a>
+
+        <!-- botón para demo overlay (z-index) -->
+        <div class="header__controls">
+          <button
+            id="open-overlay"
+            class="btn btn--ghost"
+            aria-controls="demo-overlay"
+          >
+            Ver Z-Index
+          </button>
+          <button
+            id="nav-toggle"
+            class="nav-toggle"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- DEMO OVERLAY (se usa para mostrar z-index en vivo) -->
+    <div id="demo-overlay" class="overlay" aria-hidden="true" tabindex="-1">
+      <div
+        class="overlay__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="overlay-title"
+      >
+        <h2 id="overlay-title">Overlay: Ejemplo de z-index</h2>
+        <p>
+          Este panel usa z-index alto para mostrarse sobre todo. Cerralo para
+          volver.
+        </p>
+        <button id="close-overlay" class="btn">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- LAYOUT PRINCIPAL -->
+    <div class="page">
+      <!-- SIDEBAR (position: sticky en desktop; off-canvas en móvil) -->
+      <aside
+        class="sidebar"
+        id="main-nav"
+        role="navigation"
+        aria-label="Navegación principal"
+      >
+        <div class="sidebar__inner">
+          <h3 class="sidebar__title">Módulo 3</h3>
+          <ul class="sidebar__list">
+            <li><a href="#static">Static</a></li>
+            <li><a href="#relative">Relative</a></li>
+            <li><a href="#absolute">Absolute</a></li>
+            <li><a href="#fixed">Fixed</a></li>
+            <li><a href="#sticky">Sticky</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- CONTENIDO -->
+      <main class="content" id="main-content">
+        <section class="hero" id="static">
+          <div class="hero__card">
+            <h1 class="hero__title">Posicionamiento Avanzado</h1>
+            <p class="hero__lead">
+              En esta práctica verás cómo funcionan <strong>static</strong>,
+              <strong>relative</strong>, <strong>absolute</strong>,
+              <strong>fixed</strong> y <strong>sticky</strong> en ejemplos
+              reales.
+            </p>
+          </div>
+
+          <!-- elemento decorativo absolute (dentro de hero relativo) -->
+          <div class="hero__shape" aria-hidden="true"></div>
+        </section>
+
+        <section class="examples container">
+          <!-- STATIC -->
+          <article class="card" id="static-example">
+            <h2 id="static">Static (comportamiento por defecto)</h2>
+            <p>
+              Los elementos con <code>position: static</code> siguen el flujo
+              normal del documento (este texto + elementos se apilan).
+            </p>
+          </article>
+
+          <!-- RELATIVE + ABSOLUTE (contexto) -->
+          <article class="card card--relative" id="relative">
+            <h2>Relative (crea un contexto)</h2>
+            <p>
+              Este contenedor tiene <code>position: relative</code>. Dentro
+              colocamos un elemento <code>absolute</code> (badge) que se
+              posiciona respecto a este contenedor.
+            </p>
+
+            <!-- BADGE absoluto — se posiciona respecto al padre .card--relative -->
+            <span class="badge">ABS</span>
+
+            <p style="margin-top: 1.15rem">
+              Mové el tamaño de la ventana o cambiá el texto para ver cómo la
+              posición del badge depende del contenedor relativo.
+            </p>
+          </article>
+
+          <!-- ABSOLUTE fuera del flujo -->
+          <article class="card" id="absolute">
+            <h2>Absolute (fuera del flujo)</h2>
+            <p>
+              Un elemento con <code>position: absolute</code> se saca del flujo
+              y se posiciona respecto a su ancestro posicionado. Si no existe,
+              se posiciona respecto al <code>viewport</code>.
+            </p>
+
+            <!-- ejemplo práctico: un cuadro absolut que se "superpone" -->
+            <div class="absolute-demo">
+              <div class="absolute-demo__box">Caja normal</div>
+              <div class="absolute-demo__floating">Flota (absolute)</div>
+            </div>
+          </article>
+
+          <!-- FIXED -->
+          <article class="card" id="fixed">
+            <h2>Fixed (pegado al viewport)</h2>
+            <p>
+              Header y botón flotante usan <code>position: fixed</code> —
+              permanecen visibles al hacer scroll.
+            </p>
+            <p>
+              Esto es útil para elementos de acción persistente (CTA, controles
+              globales).
+            </p>
+          </article>
+
+          <!-- STICKY -->
+          <article class="card" id="sticky">
+            <h2>Sticky (mezcla relative/fixed)</h2>
+            <p>
+              El <strong>sidebar</strong> está usando
+              <code>position: sticky</code> en desktop: se queda visible cuando
+              se alcanza su posición y luego vuelve al flujo.
+            </p>
+            <p>
+              Si querés ver sticky en acción con más scroll, hacé scroll largo
+              abajo.
+            </p>
+          </article>
+
+          <!-- relleno para scroll -->
+          <div class="spacer"></div>
+        </section>
+      </main>
+    </div>
+
+    <!-- BOTÓN FLOTANTE (fixed) -->
+    <button class="fab" id="fab" aria-label="Acción rápida">+</button>
+
+    <!-- FOOTER (static) -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>© 2026 — Curso CSS</p>
+      </div>
+    </footer>
+
+    <!-- JS: toggle sidebar, overlay, accesibilidad -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

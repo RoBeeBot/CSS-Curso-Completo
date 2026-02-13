@@ -1,0 +1,73 @@
+/* 🎨 Archivo: estilos.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #0055ff;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 40px;
+}
+
+/* Contenedor */
+.contenedor {
+    position: relative;
+    /* necesario para ubicar elementos absolutos */
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    border: 2px dashed #ccc;
+    background-color: #fff;
+}
+
+/* Cajas */
+.caja {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* 🔹 Cada caja con un color y z-index diferente */
+.caja1 {
+    background-color: #007bff;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+.caja2 {
+    background-color: #e83e8c;
+    top: 80px;
+    left: 100px;
+    z-index: 3;
+}
+
+.caja3 {
+    background-color: #28a745;
+    top: 110px;
+    left: 150px;
+    z-index: 2;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    color: gray;
+    font-size: 0.9em;
+}
