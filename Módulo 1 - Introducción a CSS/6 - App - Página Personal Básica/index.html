@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Página Personal — Módulo 1</title>
+
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header (bloque BEM: header) -->
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__title">Franco Lugo</h1>
+        <p class="header__subtitle">
+          Diseñador web &amp; Desarrollador en formación
+        </p>
+      </div>
+    </header>
+
+    <!-- Main (bloque: main) -->
+    <main class="main container">
+      <!-- Section "about" (block: about) -->
+      <section class="about" id="about">
+        <h2 class="about__title">Sobre mí</h2>
+        <p class="about__text">
+          Me interesa construir interfaces limpias y aprender a dominar CSS
+          desde la base.
+        </p>
+      </section>
+
+      <!-- Section "skills" (block: skills) -->
+      <section class="skills" id="skills">
+        <h2 class="skills__title">Habilidades</h2>
+        <ul class="skills__list">
+          <li class="skills__item">HTML</li>
+          <li class="skills__item">CSS</li>
+          <li class="skills__item">JavaScript (básico)</li>
+        </ul>
+      </section>
+
+      <!-- Ejemplo de selector con id (especificidad) -->
+      <section class="example" id="spec-demo">
+        <h2 class="example__title">Demostración de especificidad</h2>
+        <p class="example__text">
+          Fijate cómo cambian estilos cuando usamos selectores distintos.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer__text">© 2026 — Página personal</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+/* =========================
+   RESET BÁSICO
+   (solo lo esencial para clase)
+   ========================= */
+* {
+  box-sizing: border-box; /* recomendación: usar border-box en todo el proyecto */
+}
+
+/* =========================
+   VARIABLES (opcional, nivel inicial)
+   ========================= */
+:root {
+  --bg: #f7fafc;
+  --text: #0f1724;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --container: 1100px;
+
+  /* Unidades base: rem para tipografías y spaciado relativo */
+  --base-font-size: 16px; /* referencia: 1rem = 16px */
+}
+
+/* =========================
+   TIPOGRAFÍA Y BODY
+   Unidades: rem, %, vh/vw (ejemplos)
+   ========================= */
+html {
+  font-size: 100%; /* 100% de 16px => 1rem = 16px */
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6; /* unidad sin medida (multiplicador) */
+  font-size: 1rem; /* 1rem = 16px */
+  margin: 0;
+}
+
+/* =========================
+   CONTENEDOR CENTRAL
+   ========================= */
+.container {
+  width: 90%;
+  max-width: var(--container); /* uso de variable */
+  margin: 0 auto; /* centrado horizontal */
+  padding: 2rem 0; /* unidades en rem -> 2rem = 32px */
+}
+
+/* =========================
+   HEADER (BEM: header__*)
+   ========================= */
+.header {
+  background: black;
+  padding: 1.5rem 0; /* 1.5rem = 24px */
+  border-bottom: 1px solid rgba(15, 23, 36, 0.06);
+}
+
+.header__inner {
+  width: 90%;
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* mobile-first, luego explicás flexbox en módulos siguientes */
+  gap: 0.25rem;
+}
+
+.header__title {
+  font-size: 1.5rem; /* rem usado para escalabilidad */
+  margin: 0;
+  color: white;
+}
+
+/* Selector de clase + elemento: ejemplo de especificidad media */
+.header__subtitle {
+  font-size: 0.9rem;
+  color: rgb(182, 166, 166);
+  margin: 0;
+}
+
+/* =========================
+   SECCIONES (BEM)
+   ========================= */
+.about,
+.skills,
+.example {
+  background: #fff;
+  padding: 1.25rem; /* padding para box model */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(15, 23, 36, 0.04); /* borde visible */
+  border-left: #2563eb 4px solid; /* borde izquierdo destacado */
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.06); /* sombra sutil para profundidad */
+}
+
+/* Elementos dentro de bloques */
+.about__title,
+.skills__title,
+.example__title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.125rem;
+}
+
+/* Lista de skills con selectores de tipo + clase (especificidad) */
+.skills__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills__item {
+  padding: 0.5rem 0; /* espacio interno */
+  border-bottom: 1px dashed rgba(15, 23, 36, 0.03);
+}
+
+/* Ultimo hijo: ejemplo de selector más específico (pseudo-clase) */
+.skills__item:last-child {
+  border-bottom: none;
+}
+
+/* =========================
+   EJEMPLO DE ESPECIFICIDAD
+   - selector de elemento (bajo)
+   - selector de clase (medio)
+   - selector de id (alto)
+   ========================= */
+
+/* 1) selector de elemento (menos específico) */
+p {
+  color:#0f1724;
+}
+
+/* 2) selector de clase (más específico que el elemento) */
+.example__text {
+  color: #1f2937;
+}
+
+/* 3) selector por id (aún más específico) - evitar abusar de IDs en CSS, usar para demostración */
+#spec-demo p {
+  color: #b91c1c; /* ejemplo: color rojo si queremos sobreescribir */
+}
+
+/* IMPORTANTE: si dos reglas aplican, gana la más específica.
+   Ejemplo práctico en clase: cambiar .example__text vs #spec-demo p y ver cuál se aplica. */
+
+/* =========================
+   UNIDADES: ejemplos visuales
+   - px, rem, %, vw, vh
+   ========================= */
+
+/* Caja con ancho en px vs % vs rem */
+.demo-width {
+  width: 320px; /* fijo en px */
+}
+
+.demo-width--percent {
+  width: 60%; /* relativo al contenedor padre */
+}
+
+.demo-height {
+  height: 40vh; /* viewport height: 40% de la altura de la ventana */
+}
+
+/* =========================
+   BOX-SIZING (ya definido globalmente) y BOX MODEL
+   - Mostrar cómo padding y border afectan dimensiones
+   ========================= */
+.box-model-demo {
+  background: #fff;
+  padding: 1rem; /* espacio interno */
+  border: 6px solid #e2e8f0;
+  margin: 1rem 0;
+  width: 260px; /* con box-sizing:border-box -> incluye border en el total */
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.06);
+  border-radius: 8px;
+}
+
+/* =========================
+   OUTLINE (focus) - accesibilidad
+   ========================= */
+a:focus,
+button:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.18);
+  outline-offset: 3px;
+}
+
+/* =========================
+   EJEMPLOS DE POSITION (nivel básico)
+   - Solo para que vean que existe; lo ampliás en módulo 3
+   ========================= */
+.position-demo {
+  position: relative; /* contexto — importante para ejemplos de absolute más adelante */
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--muted);
+  background-color: #0f1724;
+}
+
+.footer__text {
+  margin: 0;
+  font-size: 0.875rem;
+  color: rgb(213, 202, 202);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medida en CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>📏 Unidades de Medida en CSS</h1>
+
+    <section>
+        <h2>1️⃣ Unidades Absolutas</h2>
+        <p>Son fijas y no dependen del contexto. Ejemplo: <code>px</code>, <code>cm</code>, <code>mm</code>.</p>
+        <div class="box box--px">100px</div>
+        <div class="box box--cm">2cm</div>
+    </section>
+
+    <section>
+        <h2>2️⃣ Unidades Relativas</h2>
+        <p>Dependen del tamaño de otros elementos, como el contenedor o el viewport.</p>
+        <ul>
+            <li><b>em</b>: relativo al tamaño de fuente del elemento padre.</li>
+            <li><b>rem</b>: relativo al tamaño de fuente raíz (html).</li>
+            <li><b>%</b>: relativo al contenedor padre.</li>
+            <li><b>vw / vh</b>: relativo al tamaño del viewport (ventana visible).</li>
+        </ul>
+
+        <div class="contenedor">
+            <div class="box box--em">5em</div>
+            <div class="box box--rem">5rem</div>
+            <div class="box box--porcentaje">50%</div>
+        </div>
+
+        <div class="box box--vw">20vw</div>
+        <div class="box box--vh">10vh</div>
+    </section>
+
+    <footer>
+        <p>📘 Ejemplo hecho por Franco Lugo | Curso de CSS</p>
+    </footer>
+</body>
+</html>
