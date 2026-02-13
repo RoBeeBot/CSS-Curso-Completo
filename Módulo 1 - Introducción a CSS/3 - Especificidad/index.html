@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidad en CSS</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Estilos internos -->
+    <style>
+        /* 🔸 Estilo interno (nivel intermedio de prioridad) */
+        p {
+            color: orange;
+        }
+
+
+        h1 {
+            text-align: center;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Especificidad en CSS</h1>
+
+    <section>
+        <h2>1️⃣ Conflicto entre reglas</h2>
+        <p class="texto" id="especial" style="color: red;">
+            Este texto tiene varios estilos aplicados: selector, clase, id y estilo en línea.
+        </p>
+    </section>
+
+    <section>
+        <h2>2️⃣ Ejemplo visual de jerarquía</h2>
+        <ul>
+            <li>Selector de etiqueta → prioridad baja</li>
+            <li>Selector de clase → prioridad media</li>
+            <li>Selector de ID → prioridad alta</li>
+            <li>Estilo en línea → prioridad máxima</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3️⃣ Importancia del !important</h2>
+        <p class="alerta">Este texto tiene una regla con <code>!important</code>.</p>
+    </section>
+
+    <footer>
+        <p>📘 Ejemplo hecho por Franco Lugo | Curso de CSS</p>
+    </footer>
+</body>
+</html>

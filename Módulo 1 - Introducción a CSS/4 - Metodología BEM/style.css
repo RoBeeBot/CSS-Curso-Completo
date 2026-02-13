@@ -1,0 +1,96 @@
+/* ===================================
+   🧱 Metodología BEM (Block, Element, Modifier)
+   =================================== */
+
+/* 🔹 Bloque principal: card */
+.card {
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+/* 🔹 Elementos del bloque */
+.card__titulo {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #0077ff;
+}
+
+.card__texto {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card__boton {
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card__boton:hover {
+    background-color: #005ce6;
+}
+
+/* 🔸 Modificadores */
+.card--destacada {
+    border-color: #ffc107;
+    background-color: #fff9e6;
+    transform: scale(1.02);
+}
+
+.card__boton--activo {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.card__boton--activo:hover {
+    background-color: #788426;
+    color: white;
+}
+
+/* 🔹 Reset general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fb;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #0077ff;
+}
+
+h2 {
+    color: #0b8b64;
+    margin-top: 40px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #e6f0ff;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: gray;
+}

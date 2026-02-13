@@ -1,0 +1,66 @@
+/* ===============================
+   🔹 Ejemplo: Selectores en CSS
+   =============================== */
+
+/* Selector universal */
+* {
+    box-sizing: border-box;
+}
+
+/* Selector de etiqueta */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #0077ff;
+}
+
+/* Selector de clase */
+.importante {
+    color: #d63384;
+    font-weight: bold;
+    background-color: #ffe6f2;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Selector de ID */
+#unico {
+    color: white;
+    background-color: #20c997;
+    padding: 10px;
+    border-left: 6px solid #0b8b64;
+}
+
+/* Selector descendiente */
+.contenedor p {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.contenedor p span {
+    color: #ff6f00;
+}
+
+/* Selector múltiple */
+.multi,
+.contenedor {
+    border: 2px dashed #0077ff;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: gray;
+}
+

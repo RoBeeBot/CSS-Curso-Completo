@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores en CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Selectores en CSS</h1>
+
+    <section>
+        <h2>1️⃣ Selector de Etiqueta</h2>
+        <p>Este párrafo está siendo afectado por un selector de <b>etiqueta</b> (p).</p>
+    </section>
+
+    <section>
+        <h2>2️⃣ Selector de Clase</h2>
+        <p class="importante">Este texto tiene una clase llamada <code>.importante</code>.</p>
+        <p class="importante">Podemos reutilizar esta clase en otros elementos también.</p>
+    </section>
+
+    <section>
+        <h2>3️⃣ Selector de ID</h2>
+        <p id="unico">Este párrafo tiene un <code>id="unico"</code> y solo él recibe este estilo.</p>
+    </section>
+
+    <section>
+        <h2>4️⃣ Selectores Combinados</h2>
+        <div class="contenedor">
+            <p>Este párrafo está dentro de un div con clase <code>.contenedor</code>.</p>
+            <p><span>Y este <b>span</b> tiene un color distinto por ser descendiente de un párrafo.</span></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>5️⃣ Selectores Múltiples y Universales</h2>
+        <p class="multi">Este párrafo comparte estilos con otros elementos gracias a un selector múltiple.</p>
+        <div class="multi">Este div también es parte del selector múltiple.</div>
+        <p>* El selector universal afecta a todo el documento.</p>
+    </section>
+
+    <footer>
+        <p>📘 Ejemplo hecho por Franco Lugo | Curso de CSS</p>
+    </footer>
+</body>
+</html>

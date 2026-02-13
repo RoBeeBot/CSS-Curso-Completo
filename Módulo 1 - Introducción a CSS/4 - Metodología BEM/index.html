@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología BEM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🧱 Metodología BEM (Block, Element, Modifier)</h1>
+
+    <section>
+        <h2>1️⃣ ¿Qué es BEM?</h2>
+        <p>
+            BEM significa <b>Block, Element, Modifier</b>.  
+            Es una metodología que nos ayuda a escribir CSS ordenado, fácil de mantener y reutilizable.
+        </p>
+        <ul>
+            <li><b>Block:</b> un componente independiente (ejemplo: <code>.card</code>)</li>
+            <li><b>Element:</b> una parte del bloque (<code>.card__titulo</code>, <code>.card__texto</code>)</li>
+            <li><b>Modifier:</b> una variación del bloque o elemento (<code>.card--destacada</code>)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2️⃣ Ejemplo Práctico</h2>
+
+        <!-- Bloque principal -->
+        <article class="card">
+            <h3 class="card__titulo">Tarjeta Común</h3>
+            <p class="card__texto">Esta es una tarjeta normal sin modificadores.</p>
+            <button class="card__boton">Ver más</button>
+        </article>
+
+        <!-- Bloque con modificador -->
+        <article class="card card--destacada">
+            <h3 class="card__titulo">Tarjeta Destacada</h3>
+            <p class="card__texto">Esta tarjeta tiene un modificador que cambia su color y borde.</p>
+            <button class="card__boton card__boton--activo">Ver más</button>
+        </article>
+    </section>
+
+    <footer>
+        <p>📘 Ejemplo hecho por Franco Lugo | Curso de CSS</p>
+    </footer>
+</body>
+</html>
