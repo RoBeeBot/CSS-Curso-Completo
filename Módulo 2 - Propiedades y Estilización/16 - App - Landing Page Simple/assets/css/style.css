@@ -1,0 +1,265 @@
+/* =========================
+   EJEMPLO @font-face (opcional)
+   Asegurate de tener el archivo en assets/fonts/CustomFont.woff2
+   ========================= */
+@font-face {
+  font-family: "CustomDisplay";
+  src: url("../fonts/WhenTheStarsAlign.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   VARIABLES y RESET BÁSICO
+   ========================= */
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --radius: 12px;
+  --container: 1100px;
+  --gap: 1rem;
+}
+
+/* Normalize ya carga valores base; aquí forzamos box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY + contenedor
+   ========================= */
+body {
+  font-family:
+    "Inter",
+    "CustomDisplay",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  background: var(--bg);
+  color: #0f1724;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* contenedor reutilizable */
+.container {
+  width: 90%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* =========================
+   HEADER (simple, position: relative)
+   ========================= */
+.site-header {
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(15, 23, 36, 0.06);
+  position: relative; /* no fixed para que anclas con offset natural funcionen */
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+.brand {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* nav simple */
+.nav__link {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.nav__link:hover,
+.nav__link:focus {
+  background: rgba(37, 99, 235, 0.06);
+  color: var(--accent);
+  outline: none;
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.hero__content {
+  max-width: 640px;
+}
+.hero__title {
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 0.45rem;
+  letter-spacing: -0.3px;
+}
+.hero__lead {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* demo visual: caja que muestra width/height/padding/border */
+.demo-box {
+  border-radius: 12px;
+  border: 2px dashed rgba(15, 23, 36, 0.06);
+  padding: 1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(250, 250, 255, 0.9)
+  );
+  width: 320px;
+  height: 180px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.demo-box--large {
+  box-shadow: 0 12px 30px rgba(15, 23, 36, 0.06);
+}
+
+/* =========================
+   PANELS / BOX MODEL EXAMPLES
+   ========================= */
+.panel {
+  background: transparent;
+  padding: 0 0 1.5rem 0;
+  margin-bottom: 1.25rem;
+}
+
+.box-examples {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.box {
+  background: var(--card);
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 36, 0.04);
+  box-shadow: 0 8px 22px rgba(15, 23, 36, 0.03);
+  width: 320px;
+}
+.box__inner {
+  padding: 1rem;
+}
+
+/* ejemplo narrow con width/height explícitos */
+.box--narrow {
+  width: 200px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* demostración de box-sizing: por defecto content-box. para enseñar cambiar a border-box y ver efecto */
+.box--border-box {
+  box-sizing: border-box;
+}
+
+/* =========================
+   SOMBRAS / BORDES / OUTLINE
+   ========================= */
+.cards {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.card {
+  padding: 1rem;
+  border-radius: 10px;
+  min-width: 160px;
+  background: var(--card);
+  border: 1px solid rgba(15, 23, 36, 0.04);
+  box-shadow: 0 8px 20px rgba(15, 23, 36, 0.04);
+}
+.card--soft {
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.06);
+}
+.card--sharp {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.card--focus:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.18);
+  outline-offset: 3px;
+}
+
+/* =========================
+   BOTONES (ejemplo) 
+   ========================= */
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  background: var(--muted);
+  font-weight: 700;
+}
+.btn--primary {
+  background: linear-gradient(90deg, var(--accent), #06b6d4);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--muted);
+  margin-top: 2rem;
+}
+
+/* =========================
+   UTILIDADES PARA LA CLASE
+   ========================= */
+/* Mostrar borde al hacer foco en elementos para probar outline vs border */
+.debug-outline:focus {
+  outline: 3px dashed rgba(255, 0, 0, 0.18);
+  outline-offset: 4px;
+}
+
+/* =========================
+   MEDIA QUERIES (simple)
+   ========================= */
+@media (max-width: 880px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .demo-box {
+    width: 100%;
+    height: 160px;
+  }
+  .box-examples {
+    flex-direction: column;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}

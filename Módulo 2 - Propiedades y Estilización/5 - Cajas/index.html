@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas en CSS - Curso de CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📦 Cajas en CSS</h1>
+        <p>Comprendiendo el comportamiento de los elementos en el flujo del documento</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1️⃣ ¿Qué es una caja?</h2>
+            <p>
+                En CSS, <strong>todo elemento es una caja</strong>.  
+                Cada caja puede comportarse de distintas formas dependiendo de su tipo.
+                Los principales tipos de caja son:
+            </p>
+            <ul>
+                <li><strong>Block:</strong> Ocupa todo el ancho disponible y comienza en una nueva línea.</li>
+                <li><strong>Inline:</strong> Solo ocupa el espacio necesario, sin romper la línea.</li>
+                <li><strong>Inline-block:</strong> Combina características de ambos tipos.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2️⃣ Ejemplo de cajas</h2>
+
+            <h3>🔹 Display: Block</h3>
+            <div class="block ejemplo">Caja tipo Block 1</div>
+            <div class="block ejemplo">Caja tipo Block 2</div>
+
+            <h3>🔹 Display: Inline</h3>
+            <span class="inline ejemplo">Caja Inline 1</span>
+            <span class="inline ejemplo">Caja Inline 2</span>
+            <span class="inline ejemplo">Caja Inline 3</span>
+
+            <h3>🔹 Display: Inline-Block</h3>
+            <span class="inline-block ejemplo">Caja Inline-Block 1</span>
+            <span class="inline-block ejemplo">Caja Inline-Block 2</span>
+        </section>
+
+        <section>
+            <h2>3️⃣ Comportamiento visual</h2>
+            <p>
+                Las cajas <code>block</code> se apilan una debajo de otra,  
+                mientras que las <code>inline</code> y <code>inline-block</code> se colocan una al lado de la otra.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>📘 Ejemplo hecho por Franco Lugo | Curso de CSS</p>
+    </footer>
+</body>
+</html>

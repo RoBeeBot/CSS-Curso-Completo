@@ -1,0 +1,51 @@
+/* ===================================
+   🎨 Tipografías Internas con @font-face
+   =================================== */
+
+/* 1️⃣ Importar la fuente descargada */
+@font-face {
+    font-family: 'Pacifico';
+    src: url('fonts/Pacifico.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 2️⃣ Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fb;
+    color: #2d3436;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #0077ff;
+    font-family: 'Pacifico', cursive;
+}
+
+h2 {
+    color: #0b8b64;
+    margin-top: 40px;
+}
+
+/* 3️⃣ Aplicar la fuente personalizada */
+.fuente-personalizada {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #6c5ce7;
+}
+
+.normal {
+    font-family: Arial, sans-serif;
+    color: #636e72;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: gray;
+}

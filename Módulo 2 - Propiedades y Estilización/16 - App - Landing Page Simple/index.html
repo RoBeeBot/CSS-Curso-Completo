@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Landing - Módulo 2 (Propiedades y Estilización)</title>
+
+    <!-- Normalize: archivo local en assets/css/normalize.css -->
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- @font-face (opcional: ejemplo con archivo local en assets/fonts/) -->
+    <!-- Si no usás archivo local, la regla @font-face en CSS puede omitirse -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER (posición relativa/simple para que no tape contenido en anchor) -->
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="#" class="brand">MiCursoCSS</a>
+        <nav class="nav">
+          <a href="#features" class="nav__link">Features</a>
+          <a href="#boxmodel" class="nav__link">Box Model</a>
+          <a href="#typography" class="nav__link">Tipografías</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero__content">
+        <h1 class="hero__title">Landing limpia — Diseño pensado</h1>
+        <p class="hero__lead">
+          En este módulo trabajamos tipografías, cajas, box model, sombras y
+          bordes con criterio.
+        </p>
+        <a href="#features" class="btn btn--primary">Ver prácticas</a>
+      </div>
+      <aside class="hero__info" aria-hidden="true">
+        <!-- demostración visual de box con dimensiones: uso de width/height en práctica -->
+        <div class="demo-box demo-box--large" title="Ejemplo de box sizing">
+          <small>Box: 320 × 180 (contenido + padding + border)</small>
+        </div>
+      </aside>
+    </section>
+
+    <!-- FEATURES / contenido principal -->
+    <main class="main container">
+      <!-- Tipografías -->
+      <section id="typography" class="panel">
+        <h2 class="panel__title">Tipografías y propiedades de texto</h2>
+        <p class="panel__text">
+          Usamos <strong>Google Fonts</strong> y un
+          <code>@font-face</code> local como ejemplo. Manejo de
+          <code>font-weight</code>, <code>line-height</code> y
+          <code>letter-spacing</code>.
+        </p>
+      </section>
+
+      <!-- Box model -->
+      <section id="boxmodel" class="panel">
+        <h2 class="panel__title">
+          Box Model — Padding / Border / Margin / Box-sizing
+        </h2>
+
+        <div class="box-examples">
+          <div class="box box--example">
+            <div class="box__inner">
+              <p>Contenido</p>
+              <p class="muted">padding + border + margin</p>
+            </div>
+          </div>
+
+          <div class="box box--example box--narrow">
+            <div class="box__inner">Box con width y height explícitos</div>
+          </div>
+        </div>
+
+        <p class="panel__hint">
+          Observá cómo cambia el total cuando cambiás
+          <code>box-sizing</code> (content-box vs border-box).
+        </p>
+      </section>
+
+      <!-- Sombras y bordes -->
+      <section id="features" class="panel">
+        <h2 class="panel__title">Sombras, bordes y outline</h2>
+        <div class="cards">
+          <article class="card card--soft">Sombra suave (UI)</article>
+          <article class="card card--sharp">Borde definido (separador)</article>
+          <article class="card card--focus" tabindex="0">
+            Outline visible en focus (accesibilidad)
+          </article>
+        </div>
+        <p class="panel__hint">
+          Outline vs border: outline no ocupa espacio y es ideal para focus
+          accesible.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 — Curso CSS</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+/* 🎨 Archivo: estilos.css */
+
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1 {
+    color: #0055ff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0077cc;
+    margin-top: 40px;
+}
+
+p {
+    margin-bottom: 40px;
+}
+
+/* 🔹 Representación visual del modelo de caja */
+.contenedor {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 60px auto;
+}
+
+.box-content,
+.box-padding,
+.box-border,
+.box-margin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+
+.box-content {
+    background-color: #007bff;
+    width: 140px;
+    height: 140px;
+    top: 80px;
+    left: 80px;
+    z-index: 4;
+}
+
+.box-padding {
+    background-color: #17a2b8;
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    left: 50px;
+    z-index: 3;
+}
+
+.box-border {
+    background-color: #28a745;
+    width: 250px;
+    height: 250px;
+    top: 25px;
+    left: 25px;
+    z-index: 2;
+}
+
+.box-margin {
+    background-color: #ffc107;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+}
+
+/* 🔸 Ejemplo práctico */
+.caja {
+    width: 250px;
+    background-color: #d1ecf1;
+    border: 4px solid #17a2b8;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: gray;
+}

@@ -1,0 +1,84 @@
+/* ===================================
+   📝 Propiedades de Texto en CSS
+   =================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fb;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #0077ff;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #0b8b64;
+    margin-top: 40px;
+}
+
+/* 1️⃣ Color y Alineación */
+.texto-color {
+    color: #e84393;
+    text-align: center;
+}
+
+.texto-derecha {
+    color: #0984e3;
+    text-align: right;
+}
+
+/* 2️⃣ Transformación de Texto */
+.mayus {
+    text-transform: uppercase;
+    color: #6c5ce7;
+}
+
+.minus {
+    text-transform: lowercase;
+    color: #00b894;
+}
+
+.capital {
+    text-transform: capitalize;
+    color: #fdcb6e;
+}
+
+/* 3️⃣ Decoraciones y Espaciado */
+.subrayado {
+    text-decoration: underline;
+    color: #0077ff;
+}
+
+.tachado {
+    text-decoration: line-through;
+    color: #d63031;
+}
+
+.espaciado {
+    letter-spacing: 3px;
+    /* Espaciado entre letras */
+    line-height: 2;
+    /* Altura entre líneas */
+    word-spacing: 10px;
+    /* Espaciado entre palabras */
+    color: #2d3436;
+}
+
+/* 4️⃣ Sombra en el texto */
+.sombra {
+    font-size: 24px;
+    color: #2d3436;
+    text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: gray;
+}

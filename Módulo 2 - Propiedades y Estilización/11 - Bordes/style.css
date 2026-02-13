@@ -1,0 +1,73 @@
+/* 🎨 Archivo: estilos.css */
+
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #0055ff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0077cc;
+    margin-top: 40px;
+}
+
+p {
+    margin-bottom: 40px;
+}
+
+/* Cajas base */
+.caja {
+    width: 280px;
+    height: 100px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+/* 🔹 Ejemplo 1: borde sólido */
+.caja1 {
+    border: 2px solid black;
+    background-color: #e2e3e5;
+}
+
+/* 🔹 Ejemplo 2: diferentes estilos de borde */
+.caja2 {
+    border-width: 4px;
+    border-style: dotted dashed double groove;
+    border-color: #007bff #28a745 #ffc107 #dc3545;
+    background-color: #f0f8ff;
+}
+
+/* 🔹 Ejemplo 3: bordes redondeados */
+.caja3 {
+    border: 3px solid #17a2b8;
+    border-radius: 15px;
+    background-color: #d1ecf1;
+}
+
+/* 🔹 Ejemplo 4: bordes por lado */
+.caja4 {
+    border-top: 4px solid #28a745;
+    border-right: 4px dashed #007bff;
+    border-bottom: 4px double #dc3545;
+    border-left: 4px dotted #ffc107;
+    background-color: #fff3cd;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: gray;
+}

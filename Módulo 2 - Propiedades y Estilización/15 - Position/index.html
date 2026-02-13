@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propiedad Position</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Propiedad Position en CSS</h1>
+  <p>Controla cómo se ubican los elementos en la página.</p>
+
+  <section>
+    <h2>1️⃣ Position: static (por defecto)</h2>
+    <div class="contenedor">
+      <div class="caja static">Static</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2️⃣ Position: relative</h2>
+    <div class="contenedor">
+      <div class="caja relative">Relative</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3️⃣ Position: absolute</h2>
+    <div class="contenedor relative">
+      <div class="caja absolute">Absolute</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>4️⃣ Position: fixed</h2>
+    <p>Scroll para ver el botón flotante 🔽</p>
+    <div class="caja fixed">Fixed</div>
+  </section>
+
+  <section style="height: 800px;">
+    <h2>5️⃣ Position: sticky</h2>
+    <p>Haz scroll para ver cómo se “pega” el encabezado.</p>
+    <div class="sticky-header">Soy sticky 🧲</div>
+    <p style="margin-top: 600px;">Fin del scroll</p>
+  </section>
+
+  <footer>
+    <p>📘 Ejemplo hecho por Franco Lugo | Curso de CSS</p>
+  </footer>
+</body>
+</html>

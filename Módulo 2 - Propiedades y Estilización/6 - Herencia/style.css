@@ -1,0 +1,65 @@
+/* ===================================
+   🌱 Herencia en CSS
+   =================================== */
+
+/* 1️⃣ Estilos generales */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f9fc;
+    color: #2d3436;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+header {
+    text-align: center;
+    background-color: #00b894;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* 2️⃣ Herencia práctica */
+.contenedor {
+    border: 3px solid #00b894;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #e0f7f1;
+
+    /* Propiedades que se heredan */
+    color: #00695c;
+    font-family: 'Georgia', serif;
+}
+
+.contenedor h3 {
+    font-weight: bold;
+}
+
+.contenedor span {
+    font-style: italic;
+}
+
+/* 3️⃣ Forzar herencia */
+.forzar {
+    color: inherit;
+    /* hereda el color del padre aunque normalmente no lo haría */
+    border: 2px solid #00b894;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: gray;
+    margin-top: 50px;
+    font-size: 0.9em;
+}

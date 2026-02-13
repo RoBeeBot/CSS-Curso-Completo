@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia en CSS - Curso de CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌱 Herencia en CSS</h1>
+        <p>Cómo los estilos se transmiten de los elementos padre a los hijos</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1️⃣ ¿Qué es la herencia?</h2>
+            <p>
+                En CSS, la <strong>herencia</strong> es el proceso mediante el cual algunos valores de propiedades 
+                aplicados a un elemento <em>padre</em> se transmiten automáticamente a sus elementos <em>hijos</em>.
+            </p>
+            <p>
+                No todas las propiedades se heredan.  
+                Por ejemplo, las relacionadas al texto (<code>color</code>, <code>font-family</code>) sí se heredan,  
+                mientras que las de caja (<code>margin</code>, <code>border</code>) no.
+            </p>
+        </section>
+
+        <section>
+            <h2>2️⃣ Ejemplo de herencia</h2>
+
+            <div class="contenedor">
+                <h3>Título dentro del contenedor</h3>
+                <p>Este párrafo hereda el color y la fuente del contenedor.</p>
+                <span>Este span también hereda el color.</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>3️⃣ Forzar o evitar herencia</h2>
+            <p>
+                Podemos controlar la herencia manualmente usando los valores:
+            </p>
+            <ul>
+                <li><code>inherit</code> → fuerza la herencia.</li>
+                <li><code>initial</code> → usa el valor por defecto del navegador.</li>
+                <li><code>unset</code> → combina ambos comportamientos según el tipo de propiedad.</li>
+            </ul>
+
+            <p class="forzar">Este texto fuerza la herencia de color.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>📘 Ejemplo hecho por Franco Lugo | Curso de CSS</p>
+    </footer>
+</body>
+</html>

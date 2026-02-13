@@ -1,0 +1,67 @@
+/* 🔹 Archivo externo: estilos.css */
+
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #0055ff;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #0077cc;
+    margin-top: 30px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* 🔹 Ejemplo 1: medidas fijas */
+.caja-fija {
+    width: 200px;
+    height: 100px;
+    background-color: #cce5ff;
+    border: 2px solid #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔹 Ejemplo 2: medidas relativas */
+.caja-porcentaje {
+    width: 50%;
+    height: 80px;
+    background-color: #d4edda;
+    border: 2px solid #28a745;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔹 Ejemplo 3: auto y límites */
+.caja-auto {
+    width: auto;
+    max-width: 600px;
+    min-width: 200px;
+    height: auto;
+    background-color: #fff3cd;
+    border: 2px solid #ffc107;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: gray;
+}

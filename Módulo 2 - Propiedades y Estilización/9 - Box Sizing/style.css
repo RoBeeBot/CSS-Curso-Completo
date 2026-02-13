@@ -1,0 +1,63 @@
+/* 🔹 Archivo externo: estilos.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #0055ff;
+    margin-bottom: 30px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Contenedor */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* 🔹 Ejemplo de cajas */
+.caja {
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    border: 10px solid #007bff;
+    background-color: #cce5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* 🔸 Modo por defecto */
+.contenido-box {
+    box-sizing: content-box;
+    /* (Por defecto) */
+}
+
+/* 🔸 Modo más usado */
+.border-box {
+    box-sizing: border-box;
+    background-color: #d4edda;
+    border-color: #28a745;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: gray;
+}

@@ -1,0 +1,76 @@
+/* ===================================
+   🎨 Tipografías Externas (Google Fonts)
+   =================================== */
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #f7f9fb;
+    color: #2d3436;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #0077ff;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #0b8b64;
+    margin-top: 40px;
+}
+
+/* Ejemplo de fuentes individuales */
+.poppins {
+    font-family: 'Poppins', sans-serif;
+    color: #6c5ce7;
+}
+
+.roboto {
+    font-family: 'Roboto Slab', serif;
+    color: #d63031;
+}
+
+/* Ejemplo de combinación */
+.font-titulo {
+    font-family: 'Poppins', sans-serif;
+    color: #0984e3;
+}
+
+.font-cuerpo {
+    font-family: 'Roboto Slab', serif;
+    color: #2d3436;
+}
+
+/* Card de ejemplo */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.4em;
+    color: #0077ff;
+}
+
+.card-texto {
+    font-family: 'Roboto Slab', serif;
+    margin-top: 8px;
+    font-size: 1em;
+    color: #2d3436;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: gray;
+}

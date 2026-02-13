@@ -1,0 +1,68 @@
+/* ===================================
+   📦 Cajas en CSS
+   =================================== */
+
+/* 1️⃣ Estilos generales */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f6fa;
+    color: #2d3436;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+header {
+    text-align: center;
+    background-color: #0077ff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* 2️⃣ Ejemplos de cajas */
+.ejemplo {
+    border: 2px solid #0077ff;
+    background-color: #dfe6e9;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+/* Caja tipo Block */
+.block {
+    display: block;
+}
+
+/* Caja tipo Inline */
+.inline {
+    display: inline;
+}
+
+/* Caja tipo Inline-Block */
+.inline-block {
+    display: inline-block;
+    width: 150px;
+}
+
+/* 3️⃣ Visuales */
+h3 {
+    color: #0984e3;
+    margin-top: 25px;
+}
+
+ul {
+    margin-left: 25px;
+}
+
+footer {
+    text-align: center;
+    color: gray;
+    margin-top: 50px;
+    font-size: 0.9em;
+}

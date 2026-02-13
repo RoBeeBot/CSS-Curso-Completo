@@ -1,0 +1,67 @@
+/* 🔹 Archivo externo: estilos.css */
+
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #0055ff;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #0077cc;
+    margin-top: 40px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Cajas base */
+.caja {
+    width: 250px;
+    height: 100px;
+    background-color: #cce5ff;
+    border: 2px solid #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* 🔸 Ejemplo 1: márgenes individuales */
+.caja1 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* 🔸 Ejemplo 2: shorthand con 4 valores */
+.caja2 {
+    margin: 20px 40px 60px 80px;
+    /* top, right, bottom, left */
+    background-color: #d4edda;
+    border-color: #28a745;
+}
+
+/* 🔸 Ejemplo 3: centrado con margin auto */
+.caja3 {
+    margin: 0 auto;
+    background-color: #fff3cd;
+    border-color: #ffc107;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: gray;
+}

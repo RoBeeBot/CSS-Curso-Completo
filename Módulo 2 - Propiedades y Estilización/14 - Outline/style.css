@@ -1,0 +1,81 @@
+/* 🎨 Archivo: estilos.css */
+
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #0055ff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0077cc;
+    margin-top: 40px;
+}
+
+p {
+    margin-bottom: 40px;
+}
+
+/* Cajas base */
+.caja {
+    width: 260px;
+    height: 100px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* 🔹 Ejemplo 1: outline básico */
+.outline1 {
+    outline: 3px solid red;
+}
+
+/* 🔹 Ejemplo 2: outline con desplazamiento */
+.outline2 {
+    outline: 4px solid #28a745;
+    outline-offset: 10px;
+    /* separa la línea del borde */
+}
+
+/* 🔹 Ejemplo 3: comparación border vs outline */
+.border-vs-outline {
+    border: 3px solid #007bff;
+    outline: 3px solid #ffc107;
+    outline-offset: 8px;
+    background-color: #e9f5ff;
+}
+
+/* 🔹 Ejemplo 4: accesibilidad con focus */
+.input-focus {
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: all 0.2s ease;
+}
+
+.input-focus:focus {
+    outline: 3px solid #007bff;
+    outline-offset: 3px;
+    border-color: #80bdff;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: gray;
+}
