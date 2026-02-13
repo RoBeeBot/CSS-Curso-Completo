@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #0077b6;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+/* Efectos combinados */
+.effect1 {
+    filter: grayscale(100%) blur(2px);
+}
+
+.effect2 {
+    filter: brightness(1.5) saturate(200%);
+}
+
+.effect3 {
+    filter: sepia(60%) contrast(120%) hue-rotate(90deg);
+}
+
+/* Hover para animación */
+.gallery img:hover {
+    transform: scale(1.1) rotate(3deg);
+    filter: brightness(1.2) saturate(180%);
+}
+
+.nota {
+    margin-top: 30px;
+    text-align: center;
+    color: #555;
+}

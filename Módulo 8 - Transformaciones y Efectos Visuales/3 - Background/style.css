@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+/* Estilos de cajas */
+div {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+div:hover {
+    transform: scale(1.05);
+}
+
+/* Color sólido */
+.solid {
+    background: #0077b6;
+}
+
+/* Degradado lineal */
+.linear-gradient {
+    background: linear-gradient(45deg, #00b4d8, #0077b6, #90e0ef);
+}
+
+/* Degradado radial */
+.radial-gradient {
+    background: radial-gradient(circle, #0077b6, #00b4d8, #90e0ef);
+}

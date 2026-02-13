@@ -1,0 +1,50 @@
+/* Definición de variables globales */
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #00b4d8;
+    --accent-color: #90e0ef;
+    --text-color: #fff;
+    --card-padding: 20px;
+    --card-radius: 10px;
+    --card-margin: 15px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Tarjetas usando variables */
+.card {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    margin: var(--card-margin);
+    width: 250px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.5s ease, background 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background: var(--primary-color);
+}
+
+.nota {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+}

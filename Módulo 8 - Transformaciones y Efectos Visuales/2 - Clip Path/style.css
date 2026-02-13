@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: #00b4d8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+/* Formas con clip-path */
+.circle {
+    clip-path: circle(50% at 50% 50%);
+}
+
+.polygon {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.ellipse {
+    clip-path: ellipse(50% 30% at 50% 50%);
+}
+
+/* Hover para animar */
+.box:hover {
+    transform: scale(1.2) rotate(10deg);
+}
