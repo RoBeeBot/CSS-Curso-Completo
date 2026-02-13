@@ -1,0 +1,23 @@
+/* Estilos secundarios (cargados diferidos) */
+
+.btn-primary {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #61dafb;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #21a1f1;
+}
+
+main p {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}

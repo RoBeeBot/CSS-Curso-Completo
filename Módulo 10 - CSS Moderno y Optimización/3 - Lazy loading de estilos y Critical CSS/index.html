@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lazy Loading y Critical CSS</title>
+
+  <!-- Critical CSS: estilos esenciales cargados inmediatamente -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #111;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 50px 20px;
+      text-align: center;
+    }
+  </style>
+
+  <!-- Lazy load de estilos secundarios -->
+  <link rel="preload" href="clase-lazy-loading.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="clase-lazy-loading.css">
+  </noscript>
+</head>
+<body>
+  <header>
+    <h1>Lazy Loading de Estilos y Critical CSS</h1>
+  </header>
+
+  <main>
+    <p>Este ejemplo demuestra cómo cargar primero solo los estilos críticos y luego cargar el resto de CSS de forma diferida para mejorar el rendimiento.</p>
+    <button class="btn-primary">Botón de prueba</button>
+  </main>
+</body>
+</html>

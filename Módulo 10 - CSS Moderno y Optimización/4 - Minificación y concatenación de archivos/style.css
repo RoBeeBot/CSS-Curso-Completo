@@ -1,0 +1,54 @@
+/* Header */
+.header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+    flex: 1 1 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-blue {
+    border-top: 5px solid #61dafb;
+}
+
+.card-green {
+    border-top: 5px solid #28a745;
+}
+
+.card-red {
+    border-top: 5px solid #ff6f61;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #333;
+}

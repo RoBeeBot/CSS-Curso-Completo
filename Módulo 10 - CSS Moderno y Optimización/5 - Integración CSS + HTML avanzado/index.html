@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integración CSS + HTML Avanzado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Componentes Avanzados con CSS</h1>
+  </header>
+
+  <main>
+    <!-- MODAL -->
+    <section class="component">
+      <h2>Modal con CSS</h2>
+      <label for="modal-toggle" class="btn">Abrir Modal</label>
+      <input type="checkbox" id="modal-toggle" hidden>
+      <div class="modal">
+        <div class="modal-content">
+          <h3>Modal CSS</h3>
+          <p>Este modal se abre y cierra usando solo HTML y CSS.</p>
+          <label for="modal-toggle" class="close-btn">Cerrar</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <section class="component">
+      <h2>Tabs con CSS</h2>
+      <div class="tabs">
+        <input type="radio" name="tab" id="tab1" checked>
+        <label for="tab1">Tab 1</label>
+
+        <input type="radio" name="tab" id="tab2">
+        <label for="tab2">Tab 2</label>
+
+        <div class="tab-content" id="content1">
+          <p>Contenido del Tab 1.</p>
+        </div>
+        <div class="tab-content" id="content2">
+          <p>Contenido del Tab 2.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOGGLE SWITCH -->
+    <section class="component">
+      <h2>Toggle con CSS</h2>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </section>
+  </main>
+</body>
+</html>

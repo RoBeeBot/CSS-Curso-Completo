@@ -1,0 +1,44 @@
+:root {
+    --primary-color: #61dafb;
+    --bg-color: #ffffff;
+    --text-color: #111111;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container {
+    margin: 50px auto;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary-color);
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
