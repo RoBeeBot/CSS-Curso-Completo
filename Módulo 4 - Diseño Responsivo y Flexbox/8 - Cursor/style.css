@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    color: #2f3640;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    color: #0097e6;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #0097e6;
+    background-color: white;
+    color: #0097e6;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0097e6;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* 🖱️ Diferentes estilos de cursor */
+.default {
+    cursor: default;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.text {
+    cursor: text;
+}
+
+.wait {
+    cursor: wait;
+}
+
+.move {
+    cursor: move;
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+.crosshair {
+    cursor: crosshair;
+}
+
+.help {
+    cursor: help;
+}
+
+.custom {
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-2/cur110.cur'), auto;
+}

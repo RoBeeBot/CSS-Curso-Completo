@@ -1,0 +1,80 @@
+/* 🎨 Archivo: estilos.css */
+
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+    font-size: 15px;
+}
+
+/* Ejemplos */
+.ejemplo {
+    border: 2px solid #007bff;
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Imágenes flotantes */
+img {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/* Limpiar flotados (clearfix) */
+.clearfix {
+    clear: both;
+}
+
+/* Ejemplo de columnas usando float */
+.columnas {
+    margin-top: 30px;
+}
+
+.columna {
+    width: 30%;
+    float: left;
+    margin: 1.5%;
+    background-color: #d6e9ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #007bff;
+}
+
+/* Asegurar que el contenedor de columnas se expanda */
+.columnas::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: gray;
+    font-size: 0.9em;
+}

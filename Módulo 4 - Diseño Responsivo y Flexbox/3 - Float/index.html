@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propiedad Float</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Propiedad: Float</h1>
+
+  <p>
+    La propiedad <code>float</code> se utiliza para posicionar un elemento a la izquierda o a la derecha dentro de su contenedor, permitiendo que otros elementos fluyan a su alrededor.
+  </p>
+
+  <section class="ejemplo">
+    <img src="https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_3bd3e2019b44454b96c0986ee5750114.webp" alt="Imagen de ejemplo" class="float-left" width="250">
+    <p>
+      Este párrafo tiene una imagen con <code>float: left</code>.  
+      Como podés ver, el texto se acomoda a la derecha de la imagen y fluye naturalmente a su alrededor.
+      Esta técnica era muy común para colocar imágenes en artículos o blogs.
+    </p>
+  </section>
+
+  <section class="ejemplo">
+    <img src="https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_3bd3e2019b44454b96c0986ee5750114.webp" alt="Imagen de ejemplo" class="float-right" width="250">
+    <p>
+      En este caso, la imagen tiene <code>float: right</code>.  
+      Ahora el texto fluye hacia la izquierda de la imagen.
+      Aunque hoy en día se usa poco, sigue siendo útil en ciertos contextos.
+    </p>
+  </section>
+
+  <div class="clearfix"></div>
+
+  <section class="columnas">
+    <div class="columna">Columna 1</div>
+    <div class="columna">Columna 2</div>
+    <div class="columna">Columna 3</div>
+  </section>
+
+  <footer>
+    <p>📘 Ejemplo hecho por Franco Lugo | Curso de CSS</p>
+  </footer>
+</body>
+</html>

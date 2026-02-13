@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú Responsive</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">🌐 MiWeb</div>
+    
+    <nav class="nav" id="nav-menu">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Proyectos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <main class="content">
+    <h1>Menú Responsive con CSS</h1>
+    <p>Este menú se adapta automáticamente según el tamaño de la pantalla. En móviles, se muestra el icono de menú hamburguesa.</p>
+  </main>
+
+  <script>
+    // Toggle del menú
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

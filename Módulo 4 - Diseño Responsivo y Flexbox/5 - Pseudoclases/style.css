@@ -1,0 +1,108 @@
+/* 🎨 Archivo: estilos.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #0055aa;
+    margin-top: 40px;
+}
+
+section {
+    background-color: #e9f5ff;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+/* 🔹 Estados de Enlaces */
+.enlace:link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.enlace:visited {
+    color: #6f42c1;
+}
+
+.enlace:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.enlace:active {
+    color: #ff4757;
+}
+
+/* 🔹 Botón interactivo */
+.boton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+.boton:active {
+    background-color: #004085;
+}
+
+/* 🔹 Formularios */
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 5px #28a745;
+}
+
+input:invalid {
+    border-color: #dc3545;
+}
+
+/* 🔹 Pseudoclases estructurales */
+.lista li:first-child {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.lista li:last-child {
+    color: #dc3545;
+}
+
+.lista li:nth-child(2n) {
+    background-color: #cfe2ff;
+}
+
+footer {
+    text-align: center;
+    color: gray;
+    font-size: 0.9em;
+    margin-top: 50px;
+}

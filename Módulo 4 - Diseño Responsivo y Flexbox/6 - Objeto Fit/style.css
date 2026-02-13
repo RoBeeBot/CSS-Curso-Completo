@@ -1,0 +1,86 @@
+/* 🎨 Archivo: estilos.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Galería de ejemplos */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+figure {
+    width: 200px;
+    height: 150px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #e3f2fd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+figcaption {
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    padding: 5px 0;
+}
+
+/* Imágenes con distintos valores de object-fit */
+img {
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+
+    object-position: center;
+}
+
+/* 🔹 Ejemplos de object-fit */
+.cover {
+    object-fit: cover;
+}
+
+.contain {
+    object-fit: contain;
+}
+
+.fill {
+    object-fit: fill;
+}
+
+.none {
+    object-fit: none;
+}
+
+.scale-down {
+    object-fit: scale-down;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    color: gray;
+    font-size: 0.9em;
+}

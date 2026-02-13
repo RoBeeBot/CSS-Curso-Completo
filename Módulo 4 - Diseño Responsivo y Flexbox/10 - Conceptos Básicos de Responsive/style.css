@@ -1,0 +1,90 @@
+/* --- RESETEO BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- ESTILO BASE --- */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    padding: 1rem;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #0078ff;
+    font-size: 2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    flex: 1 1 300px;
+    /* Crece y se adapta */
+    min-width: 250px;
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- 💻 MEDIA QUERIES --- */
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+}
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    body {
+        background-color: #e8f0fe;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propiedad Overflow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Propiedad: Overflow</h1>
+
+  <p>
+    La propiedad <code>overflow</code> define qué hacer cuando el contenido se sale del tamaño del contenedor.
+  </p>
+
+  <section class="contenedor">
+    <div class="caja overflow-visible">
+      <h2>overflow: visible</h2>
+      <p>El contenido que se sale del contenedor sigue siendo visible fuera de él. Este es el valor por defecto.</p>
+    </div>
+
+    <div class="caja overflow-hidden">
+      <h2>overflow: hidden</h2>
+      <p>El contenido que se sale del contenedor se oculta. No se puede ver ni acceder.</p>
+    </div>
+
+    <div class="caja overflow-scroll">
+      <h2>overflow: scroll</h2>
+      <p>El contenido que se sale del contenedor puede desplazarse con una barra de scroll.</p>
+    </div>
+
+    <div class="caja overflow-auto">
+      <h2>overflow: auto</h2>
+      <p>El navegador decide si mostrar o no la barra de scroll dependiendo del tamaño del contenido.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>📘 Ejemplo hecho por Franco Lugo | Curso de CSS</p>
+  </footer>
+</body>
+</html>

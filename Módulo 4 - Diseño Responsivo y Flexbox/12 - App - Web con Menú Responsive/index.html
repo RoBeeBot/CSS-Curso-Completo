@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Web Responsive - Módulo 4</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- NAV: menú responsive accesible -->
+    <header class="site-header">
+      <div class="container header__inner">
+        <a class="brand" href="#">MiCursoCSS</a>
+
+        <!-- botón hamburguesa para móvil -->
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <nav id="primary-nav" class="nav" aria-label="Navegación principal">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#features">Features</a></li>
+            <li><a class="nav__link" href="#projects">Proyectos</a></li>
+            <li><a class="nav__link" href="#about">Sobre mí</a></li>
+            <li><a class="nav__cta" href="#start">Comenzar</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO: imagen + texto, pseudo-elemento decorativo -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">Diseño responsivo con propósito</h1>
+          <p class="hero__lead">
+            Aprendé a crear interfaces flexibles y atractivas usando Flexbox,
+            pseudoelementos y media queries.
+          </p>
+          <a class="button button--primary" href="#features">Ver prácticas</a>
+        </div>
+
+        <!-- imagen con object-fit -->
+        <div class="hero__media">
+          <img
+            src="https://picsum.photos/seed/hero/800/600"
+            alt="Ejemplo visual"
+            class="hero__img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES: uso de flexbox para tarjetas -->
+    <main class="main">
+      <section id="features" class="features container">
+        <article class="card">
+          <div class="card__media">
+            <img
+              src="https://picsum.photos/seed/1/600/400"
+              alt=""
+              class="card__img"
+            />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Flexbox para componentes</h3>
+            <p class="card__text">
+              Cómo usar flexbox para alinear y distribuir elementos en una card.
+            </p>
+            <a class="card__link" href="#">Ver ejemplo →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <img
+              src="https://picsum.photos/seed/2/600/400"
+              alt=""
+              class="card__img"
+            />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Pseudoelementos útiles</h3>
+            <p class="card__text">
+              Decorá sin añadir elementos al HTML: ::before y ::after para
+              detalles visuales.
+            </p>
+            <a class="card__link" href="#">Ver ejemplo →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <img
+              src="https://picsum.photos/seed/3/600/400"
+              alt=""
+              class="card__img"
+            />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Responsive y object-fit</h3>
+            <p class="card__text">
+              Imágenes que responden sin distorsión usando object-fit:
+              cover/contain y object-position.
+            </p>
+            <a class="card__link" href="#">Ver ejemplo →</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- sección proyectos para mostrar menú responsive con pseudo-clases -->
+      <section id="projects" class="projects container">
+        <h2 class="section__title">Proyectos rápidos</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <h4 class="project__title">Mini landing</h4>
+            <p class="project__desc">
+              Usá flexbox y media queries para una landing móvil primero.
+            </p>
+          </div>
+          <div class="project">
+            <h4 class="project__title">Galería responsive</h4>
+            <p class="project__desc">
+              Galería con object-fit y pseudoelementos para overlays.
+            </p>
+          </div>
+          <div class="project">
+            <h4 class="project__title">Menú multi-breakpoint</h4>
+            <p class="project__desc">
+              Menú responsive con estado abierto/cerrado y accesibilidad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about container">
+        <h2 class="section__title">Sobre el módulo</h2>
+        <p class="section__text">
+          En este módulo trabajamos display, overflow, pseudoclases, object-fit
+          y el pensamiento mobile-first.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 - Tu Curso CSS</p>
+      </div>
+    </footer>
+
+    <!-- JS para toggle del menú móvil -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

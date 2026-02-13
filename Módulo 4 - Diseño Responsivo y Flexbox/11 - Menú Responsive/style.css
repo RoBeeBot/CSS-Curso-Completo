@@ -1,0 +1,118 @@
+/* --- RESETEO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- ESTILO BASE --- */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+}
+
+/* --- HEADER --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0078ff;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* --- NAV --- */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ffeaa7;
+}
+
+/* --- BOTÓN HAMBURGUESA --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* --- MAIN --- */
+.content {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+
+    /* Mostrar el menú hamburguesa */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Ocultar el menú al inicio */
+    .nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #0078ff;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .nav.active {
+        max-height: 250px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    /* Animación del botón */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+}

@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    color: #0077ff;
+    margin-bottom: 1rem;
+}
+
+img {
+    /* display: block; */
+    /* margin: 0 auto; */
+    width: 20px;
+    height: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.example {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+
+}
+
+.example img {
+    width: 20%;
+    height: 20px;
+    object-fit: contain;
+    /* Hace que la imagen se recorte */
+    transition: transform 0.3s ease;
+}
+
+.example figcaption {
+    padding: 0.5rem;
+    background-color: #0077ff;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* .example:hover img {
+    transform: scale(1.05);
+} */
+
+/* 🎯 Ejemplos de posiciones */
+.centered {
+    object-position: center;
+}
+
+.top {
+    object-position: right top;
+}
+
+.left {
+    object-position: left;
+}
+
+.bottom-right {
+    object-position: bottom right;
+}
+
+
+.caja{    
+    width: 300px;
+    height: 200px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    /* margin: 2rem auto; */
+
+}
+
+.caja img {
+    width: 20px;
+    height: 20px;
+    object-fit: none;
+    /* Hace que la imagen se recorte */
+    transition: transform 0.3s ease;
+    object-position: top;
+}
