@@ -1,0 +1,102 @@
+/* --- RESETEO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- BASE --- */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f6fb;
+    color: #333;
+    padding: 2rem;
+}
+
+h1,
+h2 {
+    color: #0078ff;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* --- GRID PRINCIPAL --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    /* columna izquierda fija y derecha flexible */
+    grid-template-rows: 100px 1fr 60px;
+    /* header, contenido, footer */
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- ITEMS --- */
+.item {
+    background-color: #0078ff;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+
+/* Posicionamiento por fila/columna */
+.item1 {
+    grid-column: 1 / span 2;
+    /* ocupa ambas columnas */
+}
+
+.item2 {
+    grid-row: 2;
+    /* columna izquierda */
+}
+
+.item3 {
+    grid-column: 2;
+    /* columna derecha */
+    grid-row: 2;
+}
+
+.item4 {
+    grid-column: 1 / span 2;
+    /* ocupa las dos columnas */
+    grid-row: 3;
+}
+
+/* --- EXPLICACIÓN --- */
+.explicacion {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    line-height: 1.7;
+}
+
+code {
+    background: #f0f0f0;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #666;
+}

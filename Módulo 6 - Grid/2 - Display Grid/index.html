@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Display Grid</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🧩 Display Grid</h1>
+    <p>
+      Al aplicar <code>display: grid;</code> en un contenedor, activamos el sistema de cuadrículas de CSS.
+      Sus elementos hijos se convierten automáticamente en <strong>Grid Items</strong>.
+    </p>
+  </header>
+
+  <main>
+    <section class="grid-container">
+      <div class="item item1">Header</div>
+      <div class="item item2">Sidebar</div>
+      <div class="item item3">Contenido</div>
+      <div class="item item4">Footer</div>
+    </section>
+
+    <section class="explicacion">
+      <h2>📘 Concepto</h2>
+      <p>
+        <strong>display: grid;</strong> convierte al elemento en un contenedor de cuadrícula.
+        Luego usamos propiedades como <code>grid-template-columns</code> y <code>grid-template-rows</code>
+        para definir el tamaño de cada sección.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>💡 Tip: Con Grid podés crear estructuras de página completas sin usar position o float.</p>
+  </footer>
+</body>
+</html>

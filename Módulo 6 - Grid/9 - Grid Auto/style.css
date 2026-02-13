@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fa;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(2, 150px);
+    gap: 10px;
+    justify-content: center;
+    background: #ddd;
+    padding: 10px;
+    border-radius: 8px;
+
+    /* Grid Auto */
+    grid-auto-rows: 100px;
+    /* Altura para las filas implícitas */
+    grid-auto-columns: 120px;
+    /* Ancho para columnas implícitas */
+    grid-auto-flow: row;
+    /* Controla el flujo de los elementos extra */
+}
+
+.item {
+    background: #0077b6;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+/* Diferenciamos los items que caen en el grid auto */
+.item:nth-child(n+7) {
+    background: #00b4d8;
+}

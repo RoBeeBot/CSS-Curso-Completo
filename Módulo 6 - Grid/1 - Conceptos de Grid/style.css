@@ -1,0 +1,90 @@
+/* --- RESETEO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- BASE --- */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f8fb;
+    color: #333;
+    padding: 2rem;
+}
+
+h1,
+h2 {
+    color: #0078ff;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* --- GRID CONCEPTOS --- */
+.grid-conceptos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* tres columnas iguales */
+    grid-template-rows: repeat(2, 150px);
+    /* dos filas de 150px */
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item {
+    background-color: #0078ff;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    background-color: #005ec7;
+}
+
+/* --- EXPLICACIÓN --- */
+.explicacion {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+code {
+    background: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #666;
+}

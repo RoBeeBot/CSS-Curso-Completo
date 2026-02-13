@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 150px);
+    gap: 10px;
+    background: #ddd;
+    padding: 10px;
+}
+
+.item {
+    background: #0077b6;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* Asignación de espacios */
+.item1 {
+    grid-column: 1 / 3;
+    /* Ocupa de la columna 1 a la 2 */
+    grid-row: 1 / 2;
+    /* Ocupa la primera fila */
+    background: #00b4d8;
+}
+
+.item2 {
+    grid-column: 3 / 5;
+    /* De columna 3 a 4 */
+    grid-row: 1 / 3;
+    /* De fila 1 a 2 */
+    background: #0096c7;
+}
+
+.item3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    background: #48cae4;
+}
+
+.item4 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    background: #0077b6;
+}
+
+.item5 {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+    background: #023e8a;
+}
+
+.nota {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}

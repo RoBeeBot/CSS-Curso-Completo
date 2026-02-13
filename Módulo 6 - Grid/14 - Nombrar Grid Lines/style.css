@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+
+    /* Nombrar líneas de columnas y filas */
+    grid-template-columns: [start] 100px [line1] 150px [line2] 1fr [end];
+    grid-template-rows: [top] 100px [middle] 150px [bottom];
+    background: #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.item {
+    background: #0077b6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+/* Colocar elementos usando líneas nombradas */
+.item1 {
+    grid-column: start / line1;
+    grid-row: top / middle;
+}
+
+.item2 {
+    grid-column: line1 / line2;
+    grid-row: top / bottom;
+    background: #00b4d8;
+}
+
+.item3 {
+    grid-column: line2 / end;
+    grid-row: middle / bottom;
+    background: #0096c7;
+}
+
+.item4 {
+    grid-column: start / end;
+    grid-row: bottom / bottom;
+    /* puede ser una fila extra */
+    background: #48cae4;
+}
+
+.nota {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}

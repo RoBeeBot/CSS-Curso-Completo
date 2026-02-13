@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+    background: #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Asignamos cada área a su elemento */
+.header {
+    grid-area: header;
+    background: #0077b6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.nav {
+    grid-area: nav;
+    background: #00b4d8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.main {
+    grid-area: main;
+    background: #0096c7;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    /* en este ejemplo no se usa, pero se puede agregar a grid-template-areas */
+}
+
+.footer {
+    grid-area: footer;
+    background: #48cae4;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.nota {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
