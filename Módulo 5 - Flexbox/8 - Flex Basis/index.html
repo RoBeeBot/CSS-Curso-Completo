@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Basis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📐 Flex Basis</h1>
+    <p>
+      La propiedad <code>flex-basis</code> define el tamaño inicial de un elemento flexible antes de distribuir el espacio restante.
+      Es como el “ancho base” del elemento en el eje principal.
+    </p>
+  </header>
+
+  <main>
+    <section class="example">
+      <h2>1️⃣ flex-basis: valores fijos</h2>
+      <div class="container fixed-basis">
+        <div class="box">100px</div>
+        <div class="box">200px</div>
+        <div class="box">300px</div>
+      </div>
+    </section>
+
+    <section class="example">
+      <h2>2️⃣ flex-basis con flex-grow</h2>
+      <div class="container grow-basis">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </section>
+
+    <section class="example">
+      <h2>3️⃣ flex-basis: auto (por defecto)</h2>
+      <div class="container auto-basis">
+        <div class="box">Contenido corto</div>
+        <div class="box">Contenido más largo que ocupa más espacio</div>
+        <div class="box">Medio</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>💡 Tip: Puedes usar <code>flex-basis</code> junto con <code>flex-grow</code> para crear layouts flexibles y equilibrados.</p>
+  </footer>
+</body>
+</html>

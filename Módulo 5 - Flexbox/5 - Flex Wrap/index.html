@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Wrap</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🧩 Flex Wrap</h1>
+    <p>
+      La propiedad <code>flex-wrap</code> define si los elementos flexibles deben mantenerse en una sola línea o 
+      pasar a la siguiente cuando no hay espacio suficiente.
+    </p>
+  </header>
+
+  <main>
+    <section class="example">
+      <h2>1️⃣ No Wrap (por defecto)</h2>
+      <div class="container nowrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+      </div>
+    </section>
+
+    <section class="example">
+      <h2>2️⃣ Wrap</h2>
+      <div class="container wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+      </div>
+    </section>
+
+    <section class="example">
+      <h2>3️⃣ Wrap Reverse</h2>
+      <div class="container wrap-reverse">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>💡 Tip: <code>flex-wrap</code> puede ser <code>nowrap</code>, <code>wrap</code> o <code>wrap-reverse</code>.</p>
+  </footer>
+</body>
+</html>

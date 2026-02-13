@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Shrink</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🧩 Flex Shrink</h1>
+    <p>
+      La propiedad <code>flex-shrink</code> define qué tan rápido se encoge un elemento flexible cuando el espacio es limitado.
+      Cuanto mayor sea el número, más se reduce su tamaño.
+    </p>
+  </header>
+
+  <main>
+    <section class="example">
+      <h2>1️⃣ flex-shrink: 1 (por defecto)</h2>
+      <p>Todos los elementos pueden encogerse por igual.</p>
+      <div class="container shrink1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </section>
+
+    <section class="example">
+      <h2>2️⃣ flex-shrink: 0</h2>
+      <p>Los elementos no se encogen aunque el contenedor sea más pequeño.</p>
+      <div class="container shrink0">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </section>
+
+    <section class="example">
+      <h2>3️⃣ Valores proporcionales</h2>
+      <p>Algunos elementos se encogen más que otros.</p>
+      <div class="container shrink-diff">
+        <div class="box s1">1x</div>
+        <div class="box s2">2x</div>
+        <div class="box s3">3x</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>💡 Tip: Si el contenedor tiene menos espacio, los elementos con mayor <code>flex-shrink</code> se encogen más.</p>
+  </footer>
+</body>
+</html>

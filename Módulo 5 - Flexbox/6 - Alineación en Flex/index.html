@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alineación en Flex</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎯 Alineación en Flex</h1>
+    <p>
+      Con Flexbox podemos alinear fácilmente los elementos hijos tanto en el eje principal (<code>justify-content</code>)
+      como en el eje secundario (<code>align-items</code> y <code>align-content</code>).
+    </p>
+  </header>
+
+  <main>
+    <!-- Justify Content -->
+    <section class="example">
+      <h2>1️⃣ Justify Content</h2>
+      <p>Alinea los elementos a lo largo del eje principal (horizontal por defecto).</p>
+      <div class="container justify-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+      <div class="container justify-space-between">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+    </section>
+
+    <!-- Align Items -->
+    <section class="example">
+      <h2>2️⃣ Align Items</h2>
+      <p>Alinea los elementos en el eje secundario (vertical por defecto).</p>
+      <div class="container align-center">
+        <div class="box alto">1</div>
+        <div class="box bajo">2</div>
+        <div class="box medio">3</div>
+      </div>
+    </section>
+
+    <!-- Align Content -->
+    <section class="example">
+      <h2>3️⃣ Align Content</h2>
+      <p>
+        Controla el espacio entre las filas cuando hay varias líneas (requiere <code>flex-wrap: wrap</code>).
+      </p>
+      <div class="container align-content">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>💡 Tip: Usa <code>justify-content</code> + <code>align-items</code> para centrar elementos fácilmente.</p>
+  </footer>
+</body>
+</html>

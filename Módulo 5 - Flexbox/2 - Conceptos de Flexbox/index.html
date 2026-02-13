@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conceptos de Flexbox</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📦 Conceptos de Flexbox</h1>
+    <p>
+      Flexbox se basa en dos ejes: el <strong>eje principal</strong> (main axis) y el <strong>eje cruzado</strong> (cross axis).
+      Los elementos dentro de un contenedor <code>display: flex</code> se comportan como cajas flexibles.
+    </p>
+  </header>
+
+  <section class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </section>
+
+  <section class="concepts">
+    <h2>📘 Conceptos Clave:</h2>
+    <ul>
+      <li><strong>Contenedor Flex:</strong> el elemento padre con <code>display: flex</code>.</li>
+      <li><strong>Ítems Flex:</strong> los hijos directos del contenedor flex.</li>
+      <li><strong>Eje principal:</strong> dirección en la que se alinean los ítems (<code>flex-direction</code>).</li>
+      <li><strong>Eje cruzado:</strong> perpendicular al eje principal (controlado con <code>align-items</code>).</li>
+      <li><strong>flex-wrap:</strong> permite que los ítems bajen a otra línea si no entran.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>💡 Tip: Pensá en Flexbox como un sistema de "cajas que se adaptan" al espacio disponible.</p>
+  </footer>
+</body>
+</html>

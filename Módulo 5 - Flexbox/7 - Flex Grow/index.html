@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Grow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📏 Flex Grow</h1>
+    <p>
+      La propiedad <code>flex-grow</code> controla cuánto espacio libre extra puede tomar un elemento dentro de un contenedor flex.
+      Es un valor numérico proporcional.
+    </p>
+  </header>
+
+  <main>
+    <section class="example">
+      <h2>1️⃣ flex-grow: 0 (por defecto)</h2>
+      <div class="container grow0">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </section>
+
+    <section class="example">
+      <h2>2️⃣ flex-grow: 1</h2>
+      <div class="container grow1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </section>
+
+    <section class="example">
+      <h2>3️⃣ flex-grow: diferentes valores</h2>
+      <div class="container grow-diff">
+        <div class="box grow1">1</div>
+        <div class="box grow2">2</div>
+        <div class="box grow3">3</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>💡 Tip: Si todos tienen <code>flex-grow: 1</code>, el espacio se reparte en partes iguales.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,312 @@
+/* =========================
+   VARS + RESET
+   ========================= */
+:root {
+  --bg: #f6fbff;
+  --accent: #0077b6;
+  --accent-2: #00b4d8;
+  --text: #06283d;
+  --muted: #4b5563;
+  --wave-fill: #0077b6;
+  --container: 1100px;
+  --radius: 12px;
+  --gap: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenedor útil */
+.container {
+  width: 90%;
+  /* max-width: var(--container); */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* =========================
+   HEADER / NAV
+   ========================= */
+.site-header {
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  color: #fff;
+  position: relative;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.nav {
+  display: block;
+}
+.nav__list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.nav__link {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.nav__link:focus-visible,
+.nav__link:hover {
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* botón menú hamburguesa (solo visible en mobile) */
+.menu-toggle {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 1.6rem;
+  display: none;
+  padding: 0.35rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.menu-toggle:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.12);
+  outline-offset: 2px;
+}
+
+/* =========================
+   WAVES (SVG responsive)
+   ========================= */
+/* wave container: referencia para posicionamiento absoluto */
+.wave-container {
+  position: relative;    /* referencia para posicionar el texto */
+  width: 100%;
+  overflow: visible;     /* permitimos que el texto salga por debajo del SVG */
+  line-height: 0;
+}
+.wave-container p {
+    position: absolute;
+    /* display: flex;
+    align-items: center; */
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* color: white; */
+}
+/* el SVG (queda "debajo") */
+.wave-svg {
+  display: block;
+  width: 100%;
+  height: 120px;         /* ajustar si quieres otra altura */
+  position: relative;
+  z-index: 1;
+}
+
+.wave-path {
+  fill: var(--wave-fill);
+}
+
+/* Texto sobre la wave, pero un poco abajo (negativo -> fuera del área del SVG) */
+.wave-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;             /* <-- valor clave: mueve el texto hacia abajo */
+  z-index: 3;                /* por encima del SVG */
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  /* opcional: ligero fondo semitransparente para contraste */
+  /* background: rgba(0, 0, 0, 0.18); */
+  /* text-shadow: 0 6px 16px rgba(0,0,0,0.45); */
+  white-space: nowrap;
+  pointer-events: none;      /* evita que interfiera con clicks */
+}
+
+
+/* Ajusta altura de wave según breakpoint */
+@media (min-width: 1100px) {
+  .wave-svg {
+    height: 160px;
+  }
+}
+/* Ajustes responsive: en pantallas chicas subimos el texto un poco (menos espacio) */
+@media (max-width: 520px) {
+  .wave-text {
+    bottom: -8px;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+
+  .wave-svg {
+    height: 88px;
+  }
+}
+
+/* =========================
+   MAIN / ICONS
+   ========================= */
+.main {
+  padding: 2rem 0 3rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Icon cards: use flex for vertical alignment */
+.icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+  min-width: 120px;
+}
+
+/* icon style + subtle animation */
+.icon {
+  font-size: 3.5rem;
+  color: var(--accent);
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+.icon:hover {
+  transform: translateY(-6px) scale(1.06);
+  filter: drop-shadow(0 12px 24px rgba(0, 120, 255, 0.12));
+}
+
+/* label under icon */
+.icon-label {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+/* small lead text */
+.lead {
+  color: var(--muted);
+  max-width: 720px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--muted);
+  width: 100%;
+}
+
+/* =========================
+   RESPONSIVE breakpoints
+   mobile-first: hide nav and show menu icon
+   ========================= */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  } /* hide nav on small screens */
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .icons {
+    gap: 0.75rem;
+  }
+  .icon {
+    font-size: 3rem;
+  }
+}
+
+/* On small screens when nav is open we show it (class toggled via JS) */
+.nav.open {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 119, 182, 0.95),
+    rgba(0, 180, 216, 0.95)
+  );
+  padding: 0.75rem 1rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.nav.open .nav__list {
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.nav.open .nav__link {
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+  width: 100%;
+}
+
+/* =========================
+   ACCESSIBILITY / UTILS
+   ========================= */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

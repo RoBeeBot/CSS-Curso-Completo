@@ -1,0 +1,124 @@
+/* --- RESETEO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- BASE --- */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    color: #0078ff;
+    margin-bottom: 1rem;
+}
+
+p {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.example {
+    margin-bottom: 3rem;
+}
+
+/* --- CONTENEDORES --- */
+.container {
+    display: flex;
+    background-color: #eaf2fb;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 120px;
+    max-width: 700px;
+    margin: 1rem auto;
+    gap: 1rem;
+}
+
+/* --- CAJAS --- */
+.box {
+    background-color: #0078ff;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    flex: 1;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    background-color: #005ec7;
+}
+
+/* --- EJEMPLOS DE ORDER --- */
+.order-default .box {
+    order: 0;
+    /* por defecto */
+}
+
+.order-changed .a {
+    order: 3;
+    /* se mueve al final */
+}
+
+.order-changed .b {
+    order: 1;
+    /* se mantiene */
+}
+
+.order-changed .c {
+    order: -1;
+    /* se mueve al principio */
+}
+
+/* --- EJEMPLO RESPONSIVE --- */
+.responsive .box:nth-child(1) {
+    order: 1;
+    /* Logo */
+}
+
+.responsive .box:nth-child(2) {
+    order: 2;
+    /* Menú */
+}
+
+.responsive .box:nth-child(3) {
+    order: 3;
+    /* Botón */
+}
+
+@media (max-width: 600px) {
+    .responsive {
+        flex-direction: column;
+    }
+
+    .responsive .box:nth-child(1) {
+        order: 2;
+        /* Logo pasa al medio */
+    }
+
+    .responsive .box:nth-child(2) {
+        order: 1;
+        /* Menú va arriba */
+    }
+
+    .responsive .box:nth-child(3) {
+        order: 3;
+        /* Botón queda abajo */
+    }
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: 2rem;
+    color: #666;
+}

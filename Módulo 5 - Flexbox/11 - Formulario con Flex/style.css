@@ -1,0 +1,169 @@
+/* =========================
+   RESET & VARIABLES
+   ========================= */
+*{ box-sizing: border-box; margin:0; padding:0; }
+:root{
+  --bg: #f5f8fb;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #0078ff;
+  --accent-dark: #005ec7;
+  --radius: 10px;
+  --gap: 1rem;
+}
+
+/* =========================
+   BASE
+   ========================= */
+body{
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 2.25rem;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+.page-header { text-align:center; margin-bottom: 1.25rem; }
+.page-header h1 { color: var(--accent); font-weight:600; margin-bottom:.25rem; }
+.page-sub { color: var(--muted); margin-bottom:1.5rem; }
+
+/* =========================
+   FORM (contenedor)
+   - usa flex column para apilar filas
+   ========================= */
+.formulario{
+  max-width: 680px;
+  margin: 0 auto;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(2,6,23,0.06);
+  display:flex;
+  flex-direction:column;
+  gap: 0.9rem; /* espacio vertical entre filas */
+}
+
+/* =========================
+   FILAS (cada fila es un flex row en desktop)
+   - label + control en línea
+   ========================= */
+.form-row{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap: 0.75rem;
+}
+
+/* Label: ocupar parte del ancho (flex) — con font-weight para jerarquía */
+.form-row label{
+  flex: 1 0 120px;      /* flex-grow:1, flex-shrink:0, basis 120px -> etiqueta con ancho mínimo */
+  font-weight:600;
+  color: var(--text);
+}
+
+/* Inputs/select/textarea: ocupar resto */
+.form-row input,
+.form-row select,
+.form-row textarea{
+  flex: 2 1 220px;      /* pueden crecer y encogerse con prioridad */
+  padding: 0.6rem;
+  border: 1px solid rgba(15,23,36,0.08);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fff;
+  color: var(--text);
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+
+/* textarea: más alto, puede crecer verticalmente */
+.form-row textarea{
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Focus accesible: usa :focus-visible para evitar outlines en clics con mouse */
+.form-row input:focus-visible,
+.form-row select:focus-visible,
+.form-row textarea:focus-visible{
+  outline: 3px solid rgba(0,120,255,0.14);
+  outline-offset: 2px;
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(0,120,255,0.06);
+}
+
+/* invalid visual (útil para mostrar en la clase) */
+.form-row input:invalid,
+.form-row textarea:invalid{
+  border-color: #b91c1c;
+}
+
+/* =========================
+   BOTONES (fila con botones)
+   ========================= */
+.form-row.botones{
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* botón primario y secundario */
+.btn{
+  padding: .6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.btn--primary{
+  background: linear-gradient(90deg, var(--accent), #34b3ff);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,120,255,0.12);
+}
+.btn--primary:hover{ background: linear-gradient(90deg, var(--accent-dark), #1f7fd0); }
+
+.btn--muted{
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(15,23,36,0.06);
+}
+.btn--muted:hover{ background: rgba(15,23,36,0.02); }
+
+/* =========================
+   RESPONSIVE: móvil primero
+   - en pantallas pequeñas, apilamos label + control (column)
+   ========================= */
+@media (max-width: 600px){
+  .form-row{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-row label{
+    /* etiqueta ocupa 100% y queda con margin-bottom natural */
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .form-row.botones{
+    justify-content: center;
+  }
+}
+
+/* =========================
+   UTILS (screen-reader only) — para hints accesibles
+   ========================= */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer{ margin-top: 1.25rem; text-align:center; color: var(--muted); font-size: .95rem; }

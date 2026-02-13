@@ -1,0 +1,84 @@
+/* --- RESETEO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- ESTILO BASE --- */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    color: #0078ff;
+    margin-bottom: 1rem;
+}
+
+p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+/* --- CONTENEDORES --- */
+.example {
+    margin-bottom: 3rem;
+}
+
+.container {
+    background-color: #eaf2fb;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 150px;
+    margin: 1rem auto;
+    max-width: 700px;
+}
+
+/* --- Sin Flexbox --- */
+.block .box {
+    display: block;
+    background-color: #0078ff;
+    color: white;
+    font-weight: bold;
+    width: 80px;
+    height: 80px;
+    margin: 0.5rem auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* --- Con Flexbox --- */
+.flex {
+    display: flex;
+    /* 💪 Activa Flexbox */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.flex .box {
+    background-color: #0078ff;
+    color: white;
+    font-weight: bold;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.flex .box:hover {
+    transform: scale(1.1);
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: 2rem;
+    color: #666;
+}

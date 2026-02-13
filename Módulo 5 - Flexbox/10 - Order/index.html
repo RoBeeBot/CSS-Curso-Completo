@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Order</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🔢 Propiedad Order en Flexbox</h1>
+    <p>
+      La propiedad <code>order</code> cambia el orden visual de los elementos flexibles
+      sin alterar su posición en el código HTML.
+    </p>
+  </header>
+
+  <main>
+    <section class="example">
+      <h2>1️⃣ Orden por defecto</h2>
+      <p>Por defecto, todos los elementos tienen <code>order: 0</code>.</p>
+      <div class="container order-default">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </section>
+
+    <section class="example">
+      <h2>2️⃣ Cambiando el orden</h2>
+      <p>
+        Los elementos pueden moverse visualmente al principio o al final del contenedor.
+      </p>
+      <div class="container order-changed">
+        <div class="box a">1</div>
+        <div class="box b">2</div>
+        <div class="box c">3</div>
+      </div>
+    </section>
+
+    <section class="example">
+      <h2>3️⃣ Ejemplo práctico</h2>
+      <p>
+        Ideal para diseños <strong>responsive</strong>: por ejemplo, mover el menú o el logo en pantallas pequeñas.
+      </p>
+      <div class="container responsive">
+        <div class="box">Logo</div>
+        <div class="box">Menú</div>
+        <div class="box">Botón</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>💡 Tip: Cambiar el <code>order</code> no afecta la lectura del HTML, solo el orden visual.</p>
+  </footer>
+</body>
+</html>

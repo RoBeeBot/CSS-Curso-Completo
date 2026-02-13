@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Método DRY en CSS</title>
+
+  <!-- Fuente (opcional, pero coherente con otras clases) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>💡 Método DRY (Don't Repeat Yourself)</h1>
+    <p class="lead">
+      El principio DRY significa <strong>“No te repitas”</strong>.
+      En CSS se aplica creando clases reutilizables en vez de repetir estilos.
+    </p>
+  </header>
+
+  <main class="page-main">
+
+    <!-- Sección de ejemplo: Código repetido (mala práctica) -->
+    <section class="panel" aria-labelledby="sin-dry-title">
+      <h2 id="sin-dry-title">❌ Código repetido</h2>
+
+      <p class="panel__desc">Aquí vemos dos botones con estilos repetidos (mala práctica).</p>
+
+      <div class="examples">
+        <!-- botones con estilos repetidos (intencional para demo) -->
+        <button class="btn1" type="button">Guardar</button>
+        <button class="btn2" type="button">Cancelar</button>
+      </div>
+    </section>
+
+    <!-- Sección de ejemplo: Aplicando DRY (buena práctica) -->
+    <section class="panel" aria-labelledby="con-dry-title">
+      <h2 id="con-dry-title">✅ Aplicando DRY</h2>
+
+      <p class="panel__desc">Usamos una clase base <code>.btn</code> y modificadores para variantes.</p>
+
+      <div class="examples">
+        <button class="btn btn--success" type="button">Guardar</button>
+        <button class="btn btn--danger" type="button">Cancelar</button>
+        <!-- variantes extra: outline / small -->
+        <button class="btn btn--outline btn--sm" type="button">Más info</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>💬 <strong>Tip:</strong> Usá clases base y modificadores para mantener tu CSS limpio y escalable.</p>
+  </footer>
+
+  <!-- pequeña ayuda a lectores de pantalla (no visible) -->
+  <div class="sr-only" aria-hidden="true">Fin del ejemplo DRY</div>
+</body>
+</html>

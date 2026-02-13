@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario con Flexbox</title>
+
+  <!-- Google Font: Poppins (estabas usando esta fuente en CSS) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>🧾 Formulario con Flexbox</h1>
+    <p class="page-sub">
+      En este ejemplo usamos <code>display: flex</code> para alinear etiquetas y campos de forma ordenada y responsive.
+    </p>
+  </header>
+
+  <main>
+    <!-- Añadí method y action por buena práctica; name en los inputs -->
+    <form class="formulario" action="#" method="post" novalidate>
+      <div class="form-row">
+        <label for="nombre">Nombre<span aria-hidden="true"> *</span></label>
+        <input name="nombre" type="text" id="nombre" placeholder="Ej: Franco Lugo" required aria-required="true" />
+      </div>
+
+      <div class="form-row">
+        <label for="email">Correo<span aria-hidden="true"> *</span></label>
+        <input name="email" type="email" id="email" placeholder="Ej: franco@mail.com" required aria-required="true" />
+      </div>
+
+      <div class="form-row">
+        <label for="pais">País</label>
+        <select name="pais" id="pais" >
+          <option value="">Selecciona tu país</option>
+          <option value="ar">Argentina</option>
+          <option value="cl">Chile</option>
+          <option value="uy">Uruguay</option>
+          <option value="mx">México</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="mensaje">Mensaje</label>
+        <!-- aria-describedby apunta a un pequeño hint si querés dar más info -->
+        <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje aquí..." aria-describedby="msg-hint"></textarea>
+      </div>
+
+      <div id="msg-hint" class="sr-only">Máx. 500 caracteres.</div>
+
+      <div class="form-row botones">
+        <!-- reset con estilo secundario; submit primario -->
+        <button type="reset" class="btn btn--muted">Limpiar</button>
+        <button type="submit" class="btn btn--primary">Enviar</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>💡 Tip: Flexbox facilita crear formularios alineados y adaptables sin necesitar floats.</p>
+  </footer>
+</body>
+</html>

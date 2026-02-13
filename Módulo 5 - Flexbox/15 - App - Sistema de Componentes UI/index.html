@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Módulo 5 — Flexbox: Sistema de Componentes UI</title>
+
+    <!-- Fuente Google (opcional) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR: componente horizontal con iconos -->
+    <header class="nav">
+      <div class="nav__inner container">
+        <a class="brand" href="#">UI-Flex</a>
+
+        <!-- links (flex row) -->
+        <nav class="nav__links" aria-label="Navegación principal">
+          <a class="nav__link" href="#cards">Cards</a>
+          <a class="nav__link" href="#list">Lista</a>
+          <a class="nav__link" href="#form">Formulario</a>
+        </nav>
+
+        <!-- acciones: buttons con icono -->
+        <div class="nav__actions">
+          <button class="btn btn--ghost" aria-label="Buscar">
+            <!-- icono lupa inline SVG -->
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                fill="currentColor"
+                d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"
+              ></path>
+            </svg>
+            <span class="btn__label">Buscar</span>
+          </button>
+
+          <button class="btn btn--primary" aria-label="Nuevo">
+            <!-- icono + -->
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" />
+            </svg>
+            <span class="btn__label">Nuevo</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL: todo con flex column -->
+    <main class="main container">
+      <!-- Sección: Cards (demuestran flex-direction, wrap y alignment dentro de card list) -->
+      <section id="cards" class="section">
+        <h2 class="section__title">Cards — Flex row + wrap</h2>
+
+        <!-- contenedor de cards: display:flex; flex-wrap:wrap; gap -->
+        <div class="cards">
+          <!-- Card 1: producto -->
+          <article class="card">
+            <div class="card__media" aria-hidden="true">
+              <img
+                src="https://picsum.photos/seed/p1/600/400"
+                alt="Producto 1"
+                class="card__img"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Producto A</h3>
+              <p class="card__desc">Resumen corto del producto.</p>
+
+              <!-- fila de acciones: demostración de flex grow/shrink/basis -->
+              <div class="card__actions">
+                <button class="btn btn--sm">Agregar</button>
+                <button class="btn btn--outline">Detalles</button>
+                <div class="card__price">$49</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: perfil (se usa order para cambiar orden visual en mobile) -->
+          <article class="card card--profile">
+            <div class="card__avatar" aria-hidden="true">
+              <svg
+                width="80"
+                height="80"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="8" r="4" fill="#c7d2fe" />
+                <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="#e0e7ff" />
+              </svg>
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Perfil Usuario</h3>
+              <p class="card__desc">Rol: Estudiante</p>
+
+              <div class="card__actions">
+                <button class="btn btn--sm">Seguir</button>
+                <div class="card__meta">12 proyectos</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: otra variante para ver flex-basis y grow -->
+          <article class="card">
+            <div class="card__media">
+              <img
+                src="https://picsum.photos/seed/p3/600/400"
+                alt="Producto 3"
+                class="card__img"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Producto C</h3>
+              <p class="card__desc">Descripción breve.</p>
+
+              <div class="card__actions">
+                <button class="btn btn--sm">Agregar</button>
+                <div class="card__price">$89</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Sección: Lista (demuestra justify/align y order en items) -->
+      <section id="list" class="section">
+        <h2 class="section__title">
+          Lista de ítems — control de orden y alineación
+        </h2>
+
+        <!-- lista con display:flex (columna en mobile, row en desktop) -->
+        <ul class="item-list" role="list">
+          <li class="item-list__item" data-order="2">
+            <div class="item__left">①</div>
+            <div class="item__body">Tarea importante</div>
+            <div class="item__right">Hoy</div>
+          </li>
+
+          <li class="item-list__item" data-order="1">
+            <div class="item__left">②</div>
+            <div class="item__body">Tarea secundaria</div>
+            <div class="item__right">Mañana</div>
+          </li>
+
+          <li class="item-list__item" data-order="3">
+            <div class="item__left">③</div>
+            <div class="item__body">Tarea opcional</div>
+            <div class="item__right">Próx. semana</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Sección: Formulario (alineado con flex) -->
+      <section id="form" class="section">
+        <h2 class="section__title">Formulario alineado con Flexbox</h2>
+
+        <form class="form" action="#" novalidate>
+          <div class="form__row">
+            <label class="form__label" for="name">Nombre</label>
+            <input
+              id="name"
+              class="form__input"
+              type="text"
+              placeholder="Tu nombre"
+            />
+          </div>
+
+          <div class="form__row form__row--two">
+            <div class="form__col">
+              <label for="email" class="form__label">Email</label>
+              <input
+                id="email"
+                class="form__input"
+                type="email"
+                placeholder="correo@ejemplo.com"
+              />
+            </div>
+
+            <div class="form__col">
+              <label for="phone" class="form__label">Teléfono</label>
+              <input
+                id="phone"
+                class="form__input"
+                type="tel"
+                placeholder="+54 ..."
+              />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <label for="message" class="form__label">Mensaje</label>
+            <textarea
+              id="message"
+              class="form__textarea"
+              rows="4"
+              placeholder="Tu mensaje..."
+            ></textarea>
+          </div>
+
+          <div class="form__row form__actions">
+            <button class="btn btn--primary" type="submit">Enviar</button>
+            <button class="btn btn--outline" type="reset">Borrar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© 2026 — Curso CSS</small>
+      </div>
+    </footer>
+
+    <!-- JS para comportamiento responsive (opcional) -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

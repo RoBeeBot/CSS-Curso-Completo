@@ -1,0 +1,90 @@
+/* --- RESETEO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- BASE --- */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    color: #0078ff;
+    margin-bottom: 1rem;
+}
+
+p {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.example {
+    margin-bottom: 3rem;
+}
+
+/* --- CONTENEDORES --- */
+.container {
+    display: flex;
+    background-color: #eaf2fb;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 120px;
+    max-width: 700px;
+    margin: 1rem auto;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+/* --- CAJAS --- */
+.box {
+    background-color: #0078ff;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    flex-basis: 250px;
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+/* --- FLEX-SHRINK EJEMPLOS --- */
+.shrink1 .box {
+    flex-shrink: 1;
+    /* valor por defecto */
+}
+
+.shrink0 .box {
+    flex-shrink: 0;
+    /* no se encogen */
+}
+
+/* --- DIFERENTES VALORES --- */
+.shrink-diff .s1 {
+    flex-shrink: 1;
+}
+
+.shrink-diff .s2 {
+    flex-shrink: 2;
+}
+
+.shrink-diff .s3 {
+    flex-shrink: 3;
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: 2rem;
+    color: #666;
+}
